@@ -17,7 +17,7 @@ export default function MadeWithLove(){
                     </div>
                 </div>
                 <div className="flex flex-col rounded-xl shadow-2xl backdrop-blur-md bg-white p-6 gap-5 max-w-screen-md mx-auto">
-                    <h2 className="text-2xl md:text-3xl font-black">Des pochettes remplis d'humour et d'originalité !</h2>
+                    <h2 className="text-2xl md:text-3xl font-black">Des pochettes remplis d&apos;humour et d&apos;originalité !</h2>
                     <p className=" font-regular sm:w-full leading-relaxed lg:text-lg">Parce qu’un ordinateur heureux est un ordinateur bien protégé ! Grâce à sa double fourrure intérieure, notre housse est là pour absorber
                         les chocs et les éraflures. Plus besoin de stresser pour les petits accidents – votre ordinateur vit sa meilleure vie,
                         bien au chaud et au sec. Un essentiel de protection ? Oui ! Mais aussi un accessoire stylé qui vous accompagne

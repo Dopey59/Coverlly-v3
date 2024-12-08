@@ -1,10 +1,11 @@
 "use client"
+import { useRef } from "react";
 
 export default function Footer(){
-
+  const footerRef = useRef(null); // Référence pour l'arrêt au footer
   return(
       <>
-      <footer id="pin-windmill-wrap" className="relative bg-gray-900 text-white py-8">
+      <footer ref={footerRef} className="relative bg-gray-900 text-white py-8">
         <div className="container mx-auto px-4">
           {/* <!-- Grid container --> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -12,7 +13,7 @@ export default function Footer(){
             <div>
               <h2 className="text-lg font-semibold mb-4">À propos de nous</h2>
               <p className="text-sm text-gray-400">
-                Notre entreprise s'engage à offrir des produits de qualité et des services d'exception. Nous croyons en l'innovation et en la satisfaction de nos clients.
+                Notre entreprise s&apos;engage à offrir des produits de qualité et des services d&apos;exception. Nous croyons en l&apos;innovation et en la satisfaction de nos clients.
               </p>
             </div>
 
@@ -43,7 +44,7 @@ export default function Footer(){
               <h2 className="text-lg font-semibold mb-4">Ressources</h2>
               <ul className="space-y-2">
                 <li><a href="#" className="text-gray-400 hover:text-white">Politique de confidentialité</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Conditions d'utilisation</a></li>
+                <li><a href="#" className="text-gray-400 hover:text-white">Conditions d&apos;utilisation</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white">Cookies</a></li>
                 <li><a href="#" className="text-gray-400 hover:text-white">Guides</a></li>
               </ul>

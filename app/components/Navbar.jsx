@@ -1,6 +1,7 @@
 "use client"
 import React from 'react';
 import { useEffect } from 'react';
+import Link from 'next/link';
 
 export default function Navbar(){
   // JavaScript for toggling mobile menu
@@ -31,7 +32,7 @@ export default function Navbar(){
           <div className="flex justify-between items-center py-4">
             {/* <!-- Nom du site --> */}
             <div className="text-2xl font-bold text-gray-800">
-            <a href="/" className="">Accueil</a>
+              <Link href="/">Accueil</Link>
               
             </div>
 
@@ -55,7 +56,7 @@ export default function Navbar(){
             </div>
 
             {/* <!-- Menu mobile --> */}
-            <div className="md:hidden flex items-center">
+            <div className="md:hidden flex items-center ">
               <button id="menu-toggle" className=" focus:outline-none">
                 {/* <!-- Hamburger Icon --> */}
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -66,7 +67,7 @@ export default function Navbar(){
           </div>
 
           {/* <!-- Menu mobile --> */}
-          <div id="mobile-menu" className="hidden md:hidden">
+          <div id="mobile-menu" className="hidden md:hidden ">
               <a href="#" className=" block py-2 px-4 font-bold w-fit text-[#ff847c] rounded ">Se connecter</a>
             <a href="formulaire_de_contact" className="block py-2 px-4  hover:bg-gray-100">Contact</a>
             {/* <!-- Dropdown Catégories --> */}
