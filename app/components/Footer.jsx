@@ -5,7 +5,7 @@ export default function Footer(){
   const footerRef = useRef(null); // Référence pour l'arrêt au footer
   return(
       <>
-      <footer ref={footerRef} className="relative bg-gray-900 text-white py-8">
+      <footer ref={footerRef} className="relative bg-black text-white py-8">
         <div className="container mx-auto px-4">
           {/* <!-- Grid container --> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

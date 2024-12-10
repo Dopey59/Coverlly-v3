@@ -22,14 +22,13 @@ export default async function ProductsPage() {
       <>
         <div className="bg-white text-black">
           <Navbar/>
-          <div className="md:mx-14 lg:p-10 p-2 flex flex-col justify-center items-center">
-            <div className="p-6 flex gap-3 flex-col items-center text-white bg-rose-400 w-full justify-end">
+          <div className="md:mx-14  flex flex-col justify-center items-center">
+            <div className="p-6 flex gap-3 flex-col items-center justify-center text-white animated-background h-96 bg-gradient-to-r from-rose-500 via-pink-500 to-rose-700 w-screen">
                 <h1 className="uppercase font-black md:text-6xl text-3xl">Catalogue</h1>
-                <p className="text-center">Découvrez maintenant nos housses de pc portable et faites marrez vos amis,
-                 votre famille ou vos collègues ! 
-                </p>
+                <h4 className="text-center text-lg font-bold"> ! Promotions en cours !</h4>
+                <p className="text-center text-lg">Découvre dès maintenant notre large gamme de housses pour pc portable.</p>
             </div>
-            <div className="">
+            <div className="p-2">
               <div className="md:grid-cols-3 grid grid-cols-2">
                 {products.map((product) => (
                 <>

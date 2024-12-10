@@ -2,6 +2,7 @@
 import Image from "next/image";
 // import ScrollElement from "../assets/images/elements/element6.png";
 import Cloud from "../assets/images/elements/pinkCloud.png";
+import '/app/globals.css'
 
 import { gsap } from "gsap";
 import { useEffect } from "react";
@@ -35,7 +36,7 @@ export default function Header() {
 
   return (
     <>
-      <section className="bg-black flex justify-center h-96 w-auto m-auto">
+      <section className="flex justify-center anim-bg h-96" >
         {/* Élément flottant */}
         {/* <div className="scrollEffect flex justify-end absolute w-full bottom-0">
           <Image
@@ -62,7 +63,7 @@ export default function Header() {
               </h1>
             </div>
             <div className="svgCloud">
-              <Image priority src={Cloud} alt="" className="grp2" data-speed="0.8" />
+              <Image priority src={Cloud} alt="" className="grp2" />
             </div>
           </div>
         </article>

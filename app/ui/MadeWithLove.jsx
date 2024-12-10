@@ -1,11 +1,12 @@
 "use client"
 import Pov1 from '../assets/images/products/pov1.png';
 import Image from 'next/image'
+import Link from 'next/link';
 
 export default function MadeWithLove(){
     return(
     <>
-    <section className="w-full sm:mt-24 mt-10">
+    <section className="w-full sm:mt-44 mt-10">
         <article className="grid md:grid-cols-2">
             <div className="">
                 <Image priority className=" drop-shadow-2xl" src={Pov1} alt="image housse de protection - pc portable"/>
@@ -23,10 +24,11 @@ export default function MadeWithLove(){
                         bien au chaud et au sec. Un essentiel de protection ? Oui ! Mais aussi un accessoire stylé qui vous accompagne
                         partout avec classe.</p>
                     <div>
-                        <button className="bg-[#ff847c] rounded p-2 text-white">En savoir plus</button>
+                        <Link href="">
+                            <button className="bg-black rounded p-2 text-white">En savoir plus</button>
+                        </Link>
                     </div>
                 </div>
-            
             </div>
         </article>
     </section>

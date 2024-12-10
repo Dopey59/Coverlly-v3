@@ -1,7 +1,10 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import Image from "next/image";
+import Link from 'next/link';
 
-import Navbar from '../layouts/Navbar'
+// import Navbar from '../layouts/Navbar'
 import Footer from '../layouts/Footer'
 import BgContact from '../assets/images/backgrounds/bg-2.jpg';
 
@@ -37,12 +40,12 @@ export const ContactUs = () => {
       {/* Contenu superposé */}
       <div className="relative h-screen p-2 mx-auto lg:px-8 sm:flex sm:justify-center sm:flex-col gap-6 sm:items-center ">
         <div className="sm:block hidden bg-white p-2 rounded-md shadow-md z-20">
-          <a href="/">
+          <Link href="/">
             <div className="flex items-center gap-2 ">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAeFJREFUWEfd10FygjAUANAfcG/ddUY7pQfR4kkqJ6k9ie1JivYgstCZ7hy6BlJCCRMggSRfGKdsHCX5vOTD/0jgxg5yYx74fyD//uKlE7JjO+0mNAi/ZxFm11E7xDDZxDlWAAqRk2ZrDMoa1MJwFRJlBZLtTOEh4BWfCJQxSJomkgWQQJS5zicWZQRSYcLTLGQbU5xHorRBfRh+C2FRWiBdzDVQvSBTDBbVCbLFYFBKEBZji5KCroWxQbVAsgrsQLbmj7Ztn9JtMzWQqh0cTtMWfPnwsyGUPubYfVWHFhc/Ja7n0jRihbLZ01aLmNYWJKnotQut5vGxqrTCTBHEuzsB4gtDthSoL/6Wfw+b3b8FKtvM4Tx94rGMQc/zeEcJbHRSx1Bfp7s1H2sMKlP2UgbY8kDiDkmDdug65hbxnST7EFOrfOzFC9eCKtIqNVGIxHSoYopzzUGL+DUPUO1eT+q2+WLeZCmTPSh/bzCKo2s1+bleFKHwvj9PAzH8IDskrFaJkmHYvEFB5QVaKBVmFFAT1YUZDcRROcZr3jPN23PwlOkUx9FualPMqCnTxeFSZlKRdUV8XKOC61bq3uJn6hDG1yq4FogNKjo7gC97JRkC09k6EBdETe39G4SKbjH55kC/16azNJTUF2sAAAAASUVORK5CYII="/>
+              <Image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAeFJREFUWEfd10FygjAUANAfcG/ddUY7pQfR4kkqJ6k9ie1JivYgstCZ7hy6BlJCCRMggSRfGKdsHCX5vOTD/0jgxg5yYx74fyD//uKlE7JjO+0mNAi/ZxFm11E7xDDZxDlWAAqRk2ZrDMoa1MJwFRJlBZLtTOEh4BWfCJQxSJomkgWQQJS5zicWZQRSYcLTLGQbU5xHorRBfRh+C2FRWiBdzDVQvSBTDBbVCbLFYFBKEBZji5KCroWxQbVAsgrsQLbmj7Ztn9JtMzWQqh0cTtMWfPnwsyGUPubYfVWHFhc/Ja7n0jRihbLZ01aLmNYWJKnotQut5vGxqrTCTBHEuzsB4gtDthSoL/6Wfw+b3b8FKtvM4Tx94rGMQc/zeEcJbHRSx1Bfp7s1H2sMKlP2UgbY8kDiDkmDdug65hbxnST7EFOrfOzFC9eCKtIqNVGIxHSoYopzzUGL+DUPUO1eT+q2+WLeZCmTPSh/bzCKo2s1+bleFKHwvj9PAzH8IDskrFaJkmHYvEFB5QVaKBVmFFAT1YUZDcRROcZr3jPN23PwlOkUx9FualPMqCnTxeFSZlKRdUV8XKOC61bq3uJn6hDG1yq4FogNKjo7gC97JRkC09k6EBdETe39G4SKbjH55kC/16azNJTUF2sAAAAASUVORK5CYII="/>
               <p className="font-bold ">Retour</p>
             </div>
-          </a>
+          </Link>
         </div>
         
         <div className="mx-auto max-w-2xl text-center ">
@@ -57,15 +60,15 @@ export const ContactUs = () => {
         </div>
         
         {/* Formulaire */}
-        <form ref={form} onSubmit={sendEmail} action="https://fabform.io/f/xxxxx" method="post" className="mx-auto relative mx-auto mt-6 max-w-xl bg-white p-6 rounded-md shadow-md z-20">
+        <form ref={form} onSubmit={sendEmail} action="https://fabform.io/f/xxxxx" method="post" className="mx-auto relative mt-6 max-w-xl bg-white p-6 rounded-md shadow-md z-20">
           <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-            <div className="flex items-center justify-center block sm:hidden">
-              <a href="/">
-                <div className="flex items-center gap-2">
-                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUNJREFUSEu1lEFygzAMRWXInmbXmWRBL5KSmzQnKTlJcpPS9CBhQWayy7BvUDHBHmMsLE+Dl7b1nyR/WcDMS8ysD2xA9npL7wtxkAnFv7grrsuSkxwLoMQFiKwTRSije7PlQLyAgTjCI2sBKRcyCbDFT5fkTe41cfTFhZAAl7jqeQjECZgSD4WMABzxEMgAECLOhWiAbcVTlXgdNoAsorPLwlrkfVUfUMCHClKAbH3LGoy6AWudc+zPc9umm3WNKhYBi5/qZfsI6RcF2Kzqc2dJ10IopXXlkReg4tVFVYEZ6GLY9+zWjvrsAHy2wjnx7+St4N6sIBjQB48gAuH4fUl2VOVq31uBIaAhtvi/KzAhrXhqZv60Cog30Nv22wW36HmAKd/7KMZckBXoyaWGi4DI6Y0B90W1LMwr7P/Glzx1PjvgD2I1DyiZdXN3AAAAAElFTkSuQmCC"/>
+            <div className="flex items-center justify-center sm:hidden">
+              <Link href="/">
+                <div clLinkssName="flex items-center gap-2">
+                    <Image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUNJREFUSEu1lEFygzAMRWXInmbXmWRBL5KSmzQnKTlJcpPS9CBhQWayy7BvUDHBHmMsLE+Dl7b1nyR/WcDMS8ysD2xA9npL7wtxkAnFv7grrsuSkxwLoMQFiKwTRSije7PlQLyAgTjCI2sBKRcyCbDFT5fkTe41cfTFhZAAl7jqeQjECZgSD4WMABzxEMgAECLOhWiAbcVTlXgdNoAsorPLwlrkfVUfUMCHClKAbH3LGoy6AWudc+zPc9umm3WNKhYBi5/qZfsI6RcF2Kzqc2dJ10IopXXlkReg4tVFVYEZ6GLY9+zWjvrsAHy2wjnx7+St4N6sIBjQB48gAuH4fUl2VOVq31uBIaAhtvi/KzAhrXhqZv60Cog30Nv22wW36HmAKd/7KMZckBXoyaWGi4DI6Y0B90W1LMwr7P/Glzx1PjvgD2I1DyiZdXN3AAAAAElFTkSuQmCC"/>
                   <p>Retour</p>
                 </div>
-              </a>
+              </Link>
             </div>
            
             {/* Champs du formulaire */}
@@ -84,7 +87,7 @@ export const ContactUs = () => {
             </div>
 
             <div className="sm:col-span-2">
-              <label for="company" className="block text-sm font-semibold leading-6 text-gray-900">Nom de l'Entreprise</label>
+              <label for="company" className="block text-sm font-semibold leading-6 text-gray-900">Nom de l&apos;Entreprise</label>
               <div className="mt-2.5">
                 <input type="text" name="user_company" id="company"  placeholder="Facultatif" autocomplete="organization" className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
               </div>
