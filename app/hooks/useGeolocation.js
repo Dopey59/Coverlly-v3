@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 
+
 const useGeolocation = () => {
   const [countryCode, setCountryCode] = useState("FR"); // Par défaut : France
   const [loading, setLoading] = useState(true);
-
+  
   useEffect(() => {
     const getCountryFromCoords = async (latitude, longitude) => {
       try {
@@ -17,6 +18,8 @@ const useGeolocation = () => {
       } finally {
         setLoading(false);
       }
+
+     
     };
 
     const getLocation = () => {

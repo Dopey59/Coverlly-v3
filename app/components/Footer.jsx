@@ -1,5 +1,6 @@
 "use client"
 import { useRef } from "react";
+import Link from "next/link";
 
 export default function Footer(){
   const footerRef = useRef(null); // Référence pour l'arrêt au footer
@@ -21,10 +22,10 @@ export default function Footer(){
             <div>
               <h2 className="text-lg font-semibold mb-4">Informations</h2>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white">À propos</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Nos services</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Carrières</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Blog</a></li>
+                <li><Link href="/" className="text-gray-400 hover:text-white">À propos </Link></li>
+                <li><Link href="/" className="text-gray-400 hover:text-white">Nos services </Link></li>
+                {/* {/* <li><Link href="/" className="text-gray-400 hover:text-white">Carrières </Link></li> */}
+                <li><Link href="/" className="text-gray-400 hover:text-white">Blog </Link></li> 
               </ul>
             </div>
 
@@ -32,10 +33,10 @@ export default function Footer(){
             <div>
               <h2 className="text-lg font-semibold mb-4">Aide</h2>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white">Support</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">FAQ</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Contact</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Retour & Remboursement</a></li>
+                {/* <li><Link href="/" className="text-gray-400 hover:text-white">Support </Link></li> */}
+                <li><Link href="/faq" className="text-gray-400 hover:text-white">FAQ </Link></li>
+                <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact </Link></li>   
+                <li><Link href="/retour&remboursement" className="text-gray-400 hover:text-white">Retour & Remboursement </Link></li>
               </ul>
             </div>
 
@@ -43,10 +44,9 @@ export default function Footer(){
             <div>
               <h2 className="text-lg font-semibold mb-4">Ressources</h2>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-white">Politique de confidentialité</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Conditions d&apos;utilisation</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Cookies</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white">Guides</a></li>
+                <li><Link href="/politique-de-confidentialite" className="text-gray-400 hover:text-white">Politique de confidentialité </Link></li>
+                <li><Link href="/cgu" className="text-gray-400 hover:text-white">Conditions d&apos;utilisation </Link></li>
+                {/* <li><Link href="/" className="text-gray-400 hover:text-white">Guides </Link></li> */}
               </ul>
             </div>
           </div>

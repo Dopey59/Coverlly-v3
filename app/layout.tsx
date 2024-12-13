@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import PrelineScript from "./components/PrelineScript";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Coverlly - Housse de protection pc portable",
@@ -17,7 +19,9 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
+        <Navbar/>
         {children}
+        <Footer/>
       </body>
       <PrelineScript />
     </html>

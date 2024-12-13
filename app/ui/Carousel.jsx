@@ -15,8 +15,8 @@ export default function Carousel() {
             <div className="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
               {/* <!-- Item --> */}
               <div className="hs-carousel-slide">
-                <div className="h-[30rem]  flex flex-col bg-[url('https://printful.s3-accelerate.amazonaws.com/files/bf7/bf7fbdfcd4e76dd52f9a344a5ab867ed?response-content-disposition=inline%3B%20filename%3D%22design-01jednak4q-1733478282.jpg%22&response-content-type=image%2Fjpeg&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA262TUYH3FYGDM3X4%2F20241208%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20241208T215641Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=4306685d1271b3f6519398213caad710f651d245f6e3cba7e6e20d776321e6dd')] bg-cover bg-center bg-no-repeat">
-                  <div className="mt-auto w-full md:max-w-lg ps-5  pb-5 md:ps-10 md:pb-10">
+                <div className="h-[30rem]  flex flex-col bg-[url('https://coverlly-img.s3.eu-north-1.amazonaws.com/le_vincent.jpg')] bg-cover bg-center bg-no-repeat">
+                  <div className="mt-auto w-full md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
                     <span className="block  bg-white p-2 uppercase font-black">Le Vincent</span>
                     <span className="block text-white text-xl md:text-3xl bg-black p-2">Tu le reconnais ? Non ce n&apos;est pas ton oncle sur la pochette.. </span>
                     <div className="mt-5">
@@ -31,7 +31,7 @@ export default function Carousel() {
       
               {/* <!-- Item --> */}
               <div className="hs-carousel-slide">
-                <div className="h-[30rem]  flex flex-col bg-[url('https://printful.s3-accelerate.amazonaws.com/files/a6f/a6f6c9c7ae08c39e8cdae735e1f38924?response-content-disposition=inline%3B%20filename%3D%22design-01jednak4q-1733478248.jpg%22&response-content-type=image%2Fjpeg&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA262TUYH3FYGDM3X4%2F20241208%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20241208T220309Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=b878049cbc1b7c992cc71d2f56b9b7b3e11ab7fd0ad194332297b2e7c771c96d')] bg-cover bg-center bg-no-repeat">
+                <div className="h-[30rem]  flex flex-col bg-[url('https://coverlly-img.s3.eu-north-1.amazonaws.com/ciel_etoile.jpg')] bg-cover bg-center bg-no-repeat">
                   <div className="mt-auto w-2/3 md:max-w-lg ps-5  pb-5 md:ps-10 md:pb-10">
                     <span className="block bg-white p-2 uppercase font-black">Ciel étoilé</span>
                     <span className="block text-white text-xl md:text-3xl bg-black p-2">T&apos;as las ref ? </span>
@@ -47,10 +47,10 @@ export default function Carousel() {
       
               {/* <!-- Item --> */}
               <div className="hs-carousel-slide">
-                <div className="h-[30rem]  flex flex-col bg-[url('https://printful.s3-accelerate.amazonaws.com/files/f51/f51b6cd0bfc34345ab07a76048979f21?response-content-disposition=inline%3B%20filename%3D%22design-01jednak4q-1733478209.jpg%22&response-content-type=image%2Fjpeg&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIA262TUYH3FYGDM3X4%2F20241208%2Fus-west-1%2Fs3%2Faws4_request&X-Amz-Date=20241208T220338Z&X-Amz-SignedHeaders=host&X-Amz-Expires=86400&X-Amz-Signature=039d553def1d99092a24ad3453f0aea2d7ee6977fa28ba67851b5aca69e83306')] bg-cover bg-center bg-no-repeat">
+                <div className="h-[30rem]  flex flex-col bg-[url('https://coverlly-img.s3.eu-north-1.amazonaws.com/botablo.jpg')]">
                   <div className="mt-auto w-2/3  md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
                     <span className="block  bg-white p-2 uppercase font-black">Botablo</span>
-                    <span className="block text-white text-xl md:text-3xl bg-black p-2">Raté! Ce n'est pas un tableau..</span>
+                    <span className="block text-white text-xl md:text-3xl bg-black p-2">Raté! Ce n&apos;est pas un tableau..</span>
                     <div className="mt-5">
                       <Link className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-white border border-transparent text-black hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" href="/produits/369496583">
                         Découvrir

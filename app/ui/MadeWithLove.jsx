@@ -24,8 +24,8 @@ export default function MadeWithLove(){
                         bien au chaud et au sec. Un essentiel de protection ? Oui ! Mais aussi un accessoire stylé qui vous accompagne
                         partout avec classe.</p>
                     <div>
-                        <Link href="">
-                            <button className="bg-black rounded p-2 text-white">En savoir plus</button>
+                        <Link href="/a-propos">
+                            <button className="bg-black rounded p-2 text-white transition ease-in-out hover:duration-500 hover:bg-rose-300">En savoir plus</button>
                         </Link>
                     </div>
                 </div>

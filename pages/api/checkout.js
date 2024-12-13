@@ -69,6 +69,11 @@ export default async function handler(req, res) {
         },
         unit_amount: Math.round(item.price * 100),
       },
+      adjustable_quantity: {
+        enabled: true,
+        minimum: 1,
+        maximum: 10,
+      },
       quantity: item.quantity,
     }));
     const EUROPEAN_COUNTRIES = [
@@ -108,7 +113,8 @@ export default async function handler(req, res) {
       line_items: lineItems,
       shipping_address_collection: {
         allowed_countries: EUROPEAN_COUNTRIES, // Pays autorisés
-      },
+      },  
+      allow_promotion_codes : true,
       shipping_options: shippingOptions,
       success_url: `${req.headers.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${req.headers.origin}/cancel`,
