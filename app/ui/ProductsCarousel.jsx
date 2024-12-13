@@ -11,13 +11,13 @@ export default function ProductCarousel(){
         <section className="grid place-items-center sm:mt-24 mt-10">
             <div className=' flex w-full items-center justify-center flex-col'>
                 <div className="flex sm:p-12 p-3 mt-6 sm:mt-0">
-                    <h1 className="lg:text-7xl sm:text-5xl uppercase text-4xl font-black text-white bg-black p-2">Modèles en vogue</h1>
+                    <h1 className="lg:text-7xl sm:text-5xl uppercase text-3xl font-black text-white bg-black p-4 rounded">Modèles en vogue</h1>
                 </div>
                 <div className="w-full flex flex-col md:justify-center items-center ">
                     <div className="carousel-product grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 sm:m-9 m-auto">
-                        <Link href='/produits/367441285'>
+                        <Link href='/produits/369868064'>
                             <div className="price flex flex-col items-center hover:cursor-pointer">
-                                <Image className=" drop-shadow-2xl" src={Money} alt="image housse de protection - pc portable"/>
+                                <Image className="drop-shadow-2xl" src={Money} alt="image housse de protection - pc portable"/>
                                 <p className="text-xl"><span className="font-bold text-2xl">MONEY WINTER</span> - 29.99€ <span className="line-through text-base text-gray-500">34.99€</span></p>
                             </div>
                         </Link>

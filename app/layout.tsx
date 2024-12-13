@@ -19,6 +19,17 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
+       <div className="bg-black text-white sm:p-2 p-3 flex justify-center items-center overflow-hidden">
+          <ul className="text-wrapper ">
+            <li className="text-item ">
+              🚚 Des retards sont à prévoir dans certains pays d&apos;Europe en raison des périodes de fêtes
+            </li>
+            <li className="text-item">
+              🏷️ Obtenez -10% avec le code: HOHO24 | à utiliser lors de votre passage en caisse
+            </li>
+          </ul>
+        </div>
+
         <Navbar/>
         {children}
         <Footer/>

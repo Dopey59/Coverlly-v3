@@ -44,3 +44,58 @@
 		background-position: 0% 50%;
 	}
 }
+
+/* Styles de la barre d'annonce */
+/* Conteneur principal */
+.text-wrapper {
+	position: relative; /* Pour permettre le positionnement absolu des items */
+	height: 1.5em; /* Ajustez selon la taille de votre texte */
+	overflow: hidden; /* Cache les textes sortant de la zone visible */
+	width: 100%;
+  }
+  
+  /* Style des éléments */
+  .text-item {
+	position: absolute;
+	width: 100%; /* Texte occupe toute la largeur */
+	text-align: center;
+	opacity: 0; /* Texte invisible par défaut */
+	transform: translateY(100%); /* Commence en dehors de la zone visible (en bas) */
+	animation: textSlide 6s linear infinite;
+  }
+  
+  /* Premier élément */
+  .text-item:nth-child(1) {
+	animation-delay: 0s;
+  }
+  
+  /* Deuxième élément */
+  .text-item:nth-child(2) {
+	animation-delay: 3s; /* Décalage de 3 secondes */
+  }
+  
+  @media (max-width: 640px) {
+	.text-wrapper {
+	  height: 50px; /* Ajustement de la hauteur pour les écrans mobiles */
+	}
+  }
+  
+  /* Animation de glissement */
+  @keyframes textSlide {
+	0% {
+	  opacity: 0;
+	  transform: translateY(100%); /* Texte en dessous */
+	}
+	10%, 40% {
+	  opacity: 1;
+	  transform: translateY(0); /* Texte visible */
+	}
+	60% {
+	  opacity: 0;
+	  transform: translateY(-100%); /* Texte disparaît en haut */
+	}
+	100% {
+	  opacity: 0;
+	  transform: translateY(-100%); /* Toujours hors écran */
+	}
+  }  

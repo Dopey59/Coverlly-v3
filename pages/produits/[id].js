@@ -84,8 +84,8 @@ const ProductDetail = ({ product, error }) => {
 
   if (loading)  return (
     <div className="">
-      <div className="h-screen flex justify-center items-center">
-        <p className="font-bol md:text-3xl text-2xl ">Chargement de votre localisation...🗺️</p>
+      <div className="h-screen flex justify-center items-center text-center">
+        <p className="font-bold md:text-3xl text-2xl ">Chargement de votre localisation...📍</p>
       </div>
     </div>
 
@@ -155,8 +155,9 @@ const ProductDetail = ({ product, error }) => {
                 <div>
                     <Image src={thumbnail_url} alt={name || "Aperçu du produit"} width={500} height={500} priority />
                 </div>
-                <div className="flex gap-5 items-center justify-center">
-                    <p className="text-3xl">{selectedPrice.toFixed(2)}€</p>{/* Affiche le prix dynamique */}
+                <div className="flex gap-3 items-center justify-center">
+                  <p className="text-3xl">{selectedPrice.toFixed(2)}€</p>{/* Affiche le prix dynamique */}
+                  <span className=" text-gray-300 text-sm line-through">34.99€</span>
                 </div>
             </div>
 
@@ -199,8 +200,8 @@ const ProductDetail = ({ product, error }) => {
                       <svg xmlns="http://www.w3.org/2000/svg" fill="gray" className="" width="24" height="24" viewBox="0 0 24 24">
                         <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
                       </svg>
-                      <p className="absolute w-44 flex justify-center items-center p-2 bg-gray-100 text-sm text-gray-600 rounded shadow-md opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-                        *13 pouces = Longueur	34.3cm | Largeur	26.7cm | Hauteur	1.5cm <br /><br /> 15 pouces = Longueur	37.3cm | Largeur	28.5cm | Hauteur	1.5cm
+                      <p className="absolute w-64 flex justify-center items-center p-2 bg-gray-100 text-sm text-gray-600 rounded shadow-md opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                        *13 pouces = Longueur	34.3cm | Largeur	26.7cm | Hauteur	1.5cm <br /><br /> *15 pouces = Longueur	37.3cm | Largeur	28.5cm | Hauteur	1.5cm
                       </p>
                   </div>
                   </div>
@@ -235,7 +236,7 @@ const ProductDetail = ({ product, error }) => {
                  <div className="flex flex-col gap-3 rounded p-2">
                   <div className="flex gap-3">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 10h6c1.654 0 3 1.346 3 3s-1.346 3-3 3h-3v2h3c2.757 0 5-2.243 5-5s-2.243-5-5-5H9V5L4 9l5 4v-3z"></path></svg>
-                      <p>30 jours pour retourner l&apos;article</p>
+                      <p>14 jours pour retourner l&apos;article</p>
                   </div>
                   <div className="flex gap-3">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="m22 3.41-.12-1.26-1.2.4a13.84 13.84 0 0 1-6.41.64 11.87 11.87 0 0 0-6.68.9A7.23 7.23 0 0 0 3.3 9.5a9 9 0 0 0 .39 4.58 16.6 16.6 0 0 1 1.18-2.2 9.85 9.85 0 0 1 4.07-3.43 11.16 11.16 0 0 1 5.06-1A12.08 12.08 0 0 0 9.34 9.2a9.48 9.48 0 0 0-1.86 1.53 11.38 11.38 0 0 0-1.39 1.91 16.39 16.39 0 0 0-1.57 4.54A26.42 26.42 0 0 0 4 22h2a30.69 30.69 0 0 1 .59-4.32 9.25 9.25 0 0 0 4.52 1.11 11 11 0 0 0 4.28-.87C23 14.67 22 3.86 22 3.41z"></path></svg>

@@ -22,7 +22,7 @@ export default function Footer(){
             <div>
               <h2 className="text-lg font-semibold mb-4">Informations</h2>
               <ul className="space-y-2">
-                <li><Link href="/" className="text-gray-400 hover:text-white">À propos </Link></li>
+                <li><Link href="/a-propos" className="text-gray-400 hover:text-white">À propos </Link></li>
                 <li><Link href="/" className="text-gray-400 hover:text-white">Nos services </Link></li>
                 {/* {/* <li><Link href="/" className="text-gray-400 hover:text-white">Carrières </Link></li> */}
                 <li><Link href="/" className="text-gray-400 hover:text-white">Blog </Link></li> 

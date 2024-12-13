@@ -15,6 +15,7 @@ export default function Home() {
 
 return (
   <div className='overflow-x-hidden'>
+    
       <HeaderV2/>
       {/* <Header/> */}
       <Carousel/>

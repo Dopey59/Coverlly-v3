@@ -6,7 +6,7 @@ export default function Carousel() {
     {/*<!-- Slider --> */}
     <div className="px-4 lg:px-8 sm:mt-44 mt-10">
       <div>
-          <h1 className="lg:text-7xl my-6 sm:text-5xl uppercase text-3xl font-black bg-black text-white p-2 w-fit">Les Zartistes</h1>
+          <h1 className="lg:text-7xl my-6 sm:text-5xl uppercase text-3xl font-black bg-black text-white p-2 w-fit rounded">Les Zartistes</h1>
       </div>
         <div data-hs-carousel='{
             "loadingClasses": "opacity-0"

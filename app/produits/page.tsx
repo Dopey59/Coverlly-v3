@@ -31,7 +31,7 @@ export default async function ProductsPage() {
               <div className="md:grid-cols-3 grid grid-cols-2">
                 {products.map((product) => (
                   <div key={product.id} className="flex flex-col items-center">
-                      <div className="flex flex-col items-center justify-center">
+                      <div className="relative flex flex-col items-center justify-center">
                       <Link href={`/produits/${product.id}`}>
                         <Image  
                           loading="lazy"
@@ -39,7 +39,10 @@ export default async function ProductsPage() {
                           alt={product.name}
                           width={500} 
                           height={500}/>
-                        <h2 className="uppercase font-bold text-center">{product.name}</h2>
+                          <div className="flex flex-col gap-2 items-center">
+                          <h2 className="uppercase font-bold text-center">{product.name}</h2>
+                          <span className="w-fit uppercase bg-red-500 p-2 text-white rounded-full text-sm">soldé</span>
+                          </div>
                         </Link>
                       </div>
                   </div>
