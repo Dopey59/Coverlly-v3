@@ -1,6 +1,7 @@
 "use client"
 
 // import Header from './ui/Header'
+
 import ProductCarousel from './ui/ProductsCarousel'
 import Made from './ui/MadeWithLove'
 import {HeaderV2} from './ui/HeaderV2'

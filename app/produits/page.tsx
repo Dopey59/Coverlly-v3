@@ -20,10 +20,12 @@ export default async function ProductsPage() {
         <div className="bg-white text-black">
           {/* Header Présentation */}
           <div className="md:mx-14  flex flex-col justify-center items-center">
-            <div className="p-6 flex gap-3 flex-col items-center justify-center text-white animated-background h-96 bg-gradient-to-r from-rose-500 via-pink-500 to-rose-700 w-screen">
+            <div className="p-6 flex gap-5 flex-col items-center justify-center text-white anim-product h-96  w-screen">
                 <h1 className="uppercase font-black md:text-6xl text-3xl">Catalogue</h1>
-                <h4 className="text-center text-lg font-bold"> ! Promotions en cours !</h4>
-                <p className="text-center text-lg">Découvre dès maintenant notre large gamme de housses pour pc portable.</p>
+                <h4 className="text-center text-sm/6 sm:text-base font-bold">⏰ Promotions terminées le 24 Décembre ⏰</h4>
+                {/* <p className="text-center text-lg">Découvre dès maintenant notre large gamme de housses pour pc portable.</p> */}
+                <p className="text-center text-lg">🏷️ -10% Avec le code : HOHO24 - à appliquer lors de votre passage en caisse</p>
+
             </div>
    
             {/* Affichage des produits */}

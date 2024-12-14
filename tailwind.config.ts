@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
 import preline from 'preline/plugin';
+import forms from '@tailwindcss/forms';
+
 
 export default {
   content: [
@@ -28,6 +30,6 @@ export default {
     },
   },
   plugins: [
-    preline,
+    preline, forms
   ],
 } satisfies Config;

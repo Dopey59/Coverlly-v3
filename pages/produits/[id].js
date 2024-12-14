@@ -1,12 +1,18 @@
+
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Navbar from "../../app/components/Navbar";
 import { loadStripe } from "@stripe/stripe-js";
 import useGeolocation from "../../app/hooks/useGeolocation"; // Assurez-vous d'avoir créé ce hook séparément
+import Details from '../../app/components/details'
+import { addToCart } from "../../app/utils/cart";
+import Logo from '../../app/assets/images/elements/coverlly.png'
+import Link from "next/link";
 import "/app/globals.css";
 
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
+ 
 
 const ProductDetail = ({ product, error }) => {
   const { sync_product, sync_variants } = product || {};
@@ -17,6 +23,10 @@ const ProductDetail = ({ product, error }) => {
   const [selectedPrice, setSelectedPrice] = useState(0); // Nouveau : pour le prix
 
   useEffect(() => {
+    if (typeof window !== 'undefined' && window.HS && window.HS.core) {
+      window.HS.core.runAll();
+    }
+    
     if (sync_variants?.length > 0) {
       // Taille et prix par défaut
       const defaultVariant = sync_variants[0];
@@ -144,6 +154,26 @@ const ProductDetail = ({ product, error }) => {
     }
   };
 
+
+// const handleAddToCart = () => {
+//   const item = {
+//     name: sync_product.name,
+//     description: `${name} (${selectedSize})`,
+//     image: thumbnail_url,
+//     price: selectedPrice,
+//     quantity: 1,
+//     variant_id: sync_variants.find((v) => v.size === selectedSize)?.variant_id,
+//     size: selectedSize,
+//   };
+
+//   try {
+//     addToCart(item);
+//     alert("Produit ajouté au panier !");
+//   } catch (error) {
+//     console.error("Erreur lors de l'ajout au panier :", error.message);
+//   }
+// };
+
   return (
     <article>
       <Navbar />
@@ -171,16 +201,18 @@ const ProductDetail = ({ product, error }) => {
                 <div className="flex flex-col gap-6 max-w-screen-md">
                     <h1 className="uppercase font-bold md:text-4xl text-2xl mt-12">Son Histoire</h1>
                     <p className="font-regular sm:w-full leading-relaxed lg:text-lg">
-                    Légère et parfaitement ajustée, cette housse pour ordinateur portable est un must pour tout propriétaire d&apos;ordinateur portable en déplacement. Pour éviter toute rayure, elle est équipée d’un zipper rembourré et son intérieur est doublé de fausse fourrure. De plus, elle est fabriquée dans un matériau résistant à l&apos;eau et aux rayures, afin que votre ordinateur portable et sa housse demeurent intacts au quotidien.                    </p>
+                    Une housse d’ordinateur, c’est plus qu’un accessoire : c’est une déclaration. Avec nos designs à la fois artistiques et malicieusement originaux, chaque housse devient une œuvre d’art portable qui fera sourire même les plus sérieux. Entre protection solide et inspiration subtile, ces pochettes transforment le quotidien en une petite exposition privée. Sortez-la de votre sac et laissez l’art parler pour vous – un mélange parfait de style, d’humour et de créativité.</p>
                     <span className="text-gray-400">Pour Mackbook et ordinateur portable.</span>
                 </div>
 
                 <div className="mt-6 sm:mt-2">
                 <hr />
             </div>
+            <h1 className="uppercase font-bold md:text-4xl text-2xl mt-10 sm:mt-5">Détails</h1>
+            <Details/>
 
-          {/* Sélecteur de taille */}
-            <div className="flex flex-col gap-5 mt-6 sm:mt-2">
+            {/* Sélecteur de taille */}
+            <div className="flex flex-col gap-5 mt-10 sm:mt-5">
                   <label htmlFor="size-selector">Choisir une taille :</label>
                   <div className="relative flex gap-2 items-center">
                   
@@ -188,7 +220,7 @@ const ProductDetail = ({ product, error }) => {
                     id="size-selector"
                     value={selectedSize}
                     onChange={handleSizeChange}
-                    className="bg-black text-white p-2 rounded-md w-auto sm:w-1/6"
+                    className="bg-black text-white p-2 rounded-md w-64 md:w-max-lg"
                     >
                     {sync_variants.map((variant, index) => (
                         <option key={index} value={variant.size}>
@@ -196,14 +228,7 @@ const ProductDetail = ({ product, error }) => {
                         </option>
                     ))}
                     </select>
-                    <div className="relative group flex justify-top items-end">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="gray" className="" width="24" height="24" viewBox="0 0 24 24">
-                        <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
-                      </svg>
-                      <p className="absolute w-64 flex justify-center items-center p-2 bg-gray-100 text-sm text-gray-600 rounded shadow-md opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-                        *13 pouces = Longueur	34.3cm | Largeur	26.7cm | Hauteur	1.5cm <br /><br /> *15 pouces = Longueur	37.3cm | Largeur	28.5cm | Hauteur	1.5cm
-                      </p>
-                  </div>
+                   
                   </div>
 
                 {/* A roujeter dynamiquement avec useState */}
@@ -213,7 +238,7 @@ const ProductDetail = ({ product, error }) => {
                   id="country-selector"
                   value={selectedCountry}
                   onChange={handleCountryChange}
-                  className="bg-black text-white p-2 rounded-md w-auto sm:w-1/6"
+                  className="bg-black text-white p-2 rounded-md w-64 md:w-max-lg"
 
                   >
                   {EUROPEAN_COUNTRIES_LIST.map((country) => (
@@ -222,18 +247,9 @@ const ProductDetail = ({ product, error }) => {
                       </option>
                   ))}
                   </select> 
-                  <div className="relative group flex justify-top items-end">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="gray" className="" width="24" height="24" viewBox="0 0 24 24">
-                      <path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"></path>
-                    </svg>
-                    <p className="absolute  w-44 p-2 bg-gray-100 text-sm text-gray-600 rounded shadow-md opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-                      *Les frais et les délais de livraison sont calculés à la prochaine étape en fonction du pays sélectionné.
-                    </p>
-                  </div>
-
                 </div>
                 <hr />
-                 <div className="flex flex-col gap-3 rounded p-2">
+                 <div className="flex flex-col gap-3 rounded p-2 ">
                   <div className="flex gap-3">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 10h6c1.654 0 3 1.346 3 3s-1.346 3-3 3h-3v2h3c2.757 0 5-2.243 5-5s-2.243-5-5-5H9V5L4 9l5 4v-3z"></path></svg>
                       <p>14 jours pour retourner l&apos;article</p>
@@ -249,13 +265,27 @@ const ProductDetail = ({ product, error }) => {
                 </div>
                 <hr />  
 
-                <div className="flex gap-4 items-center">
+
+                <div className="flex flex-col sm:flex-row py-4 md:justify-start items-center gap-6 ">
                     <button
-                    className="bg-blue-500 sm:w-1/4 w-full p-2 hover:cursor-pointer rounded text-center text-white"
+                    className=" max-w-xs duration-700 ease-in-out bg-black text-white sm:w-1/4 w-full font-medium p-2 hover:cursor-pointer hover:border-black hover:border-2 hover:bg-blue-500 hover:text-white transition hover:duration-700 rounded text-center"
                     onClick={handlePayment}
                     >
                     Acheter
                     </button>
+                    <Link href='/produits'>
+                    <button className="border-black font-medium  max-w-xs hover:text-blue-500 transition hover:duration-700 rounded duration-700 ease-in-out w-full p-2 hover:cursor-pointer text-center border-2"
+                    >
+                      Retourner en arrière
+                    </button>
+                    
+                    </Link>
+                    {/* <button
+                      className="border-black sm:w-1/4 font-medium  max-w-xs  hover:text-blue-500 transition hover:duration-700 rounded duration-700 ease-in-out  w-full p-2 hover:cursor-pointer text-center border-2"
+                      onClick={handleAddToCart}
+                    >
+                      Ajouter au panier
+                    </button> */}
                 </div>
             </div>
         </div>

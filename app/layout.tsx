@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import PrelineScript from "./components/PrelineScript";
-import Navbar from "./components/Navbar";
+import ClientNavbar from "./components/ClientNavbar"; // Importe le composant client
 import Footer from "./components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Coverlly - Housse de protection pc portable",
@@ -16,25 +17,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body
-        className={`antialiased`}
-      >
-       <div className="bg-black text-white sm:p-2 p-3 flex justify-center items-center overflow-hidden">
-          <ul className="text-wrapper ">
-            <li className="text-item ">
-              🚚 Des retards sont à prévoir dans certains pays d&apos;Europe en raison des périodes de fêtes
-            </li>
+      <body className={`antialiased`}>
+        <div className="bg-black text-white sm:p-2 p-3 flex justify-center items-center overflow-hidden">
+          <ul className="text-wrapper">
             <li className="text-item">
               🏷️ Obtenez -10% avec le code: HOHO24 | à utiliser lors de votre passage en caisse
             </li>
+            <li className="text-item">
+              🚚 Des retards sont à prévoir dans certains pays d&apos;Europe en raison des périodes de fêtes
+            </li>
           </ul>
         </div>
-
-        <Navbar/>
+        <ClientNavbar /> {/* Affiche conditionnellement la Navbar */}
         {children}
-        <Footer/>
+        <Analytics />
+        <Footer />
+        <PrelineScript />
       </body>
-      <PrelineScript />
     </html>
   );
 }

@@ -49,9 +49,9 @@ const TrackOrder = () => {
   return (
     <section>
         <div className="h-screen w-full flex flex-col gap-6 justify-center items-center">
-          <div className="flex flex-col gap-3 items-center">
-            <h1 className="md:text-5xl text-3xl">Suivez votre commande</h1>
-            <p className="">Entrez votre numéro de commande pour voir son statut.</p>
+          <div className="flex flex-col gap-3 items-center justify-center ">
+            <h1 className="md:text-5xl text-3xl p-2">Suivez votre commande</h1>
+            <p className="text-base text-center p-2">Entrez votre numéro de commande pour voir son statut.</p>
           </div>
             <div className="flex gap-4">
               <input

@@ -2,8 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .animated-background {
-    background-size: 400%;
+    background-size: 100%;
 
     -webkit-animation: animation 3s ease infinite;
     -moz-animation: animation 3s ease infinite;
@@ -29,6 +30,18 @@
 
 .anim-contact {
 	background: linear-gradient(-45deg, #342c47, #8000ff, #4989ff, #9479ff);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+.anim-product {
+	background: linear-gradient(-45deg, #009dff, #2f5e85, #e98bde, #009dff);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+.anim-button {
+	background: linear-gradient(-45deg, #009774, #009ca2, #84e4ce, #006b49);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
 }
