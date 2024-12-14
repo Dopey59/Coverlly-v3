@@ -15,9 +15,9 @@ export default function Details() {
           <DisclosurePanel className="mt-2 text-sm/5 text-white">
             <ul className='list-disc mx-5 gap-2 flex flex-col'>
               <li>100 % néoprène</li>
-              <li>Poids de la housse 13" : 220 g (6.49 oz)</li>
+              <li>Poids de la housse 13&quot; : 220 g (6.49 oz)</li>
               <li>Poids de la housse 15″ : 250 g (8.8 oz)</li>
-              <li>Léger et résistant à l'eau, à la graisse et à la chaleur</li>
+              <li>Léger et résistant à l&apos;eau, à la graisse et à la chaleur</li>
               <li>Doublure intérieure en fausse fourrure</li>
               <li>Face avant personnalisable, face arrière noir solide</li>
               <li>Design unique et sur mesure</li>
@@ -38,7 +38,7 @@ export default function Details() {
               Les délais de livraison varient en fonction des périodes de fêtes et des fortes affluences de commandes.
               Néanmoins, les délais restent aux alentours de 2 à 5 jours ouvrés.</li>
             <li>
-              À noter également que les estimations de livraison et les frais d'expédition varient en fonction des pays et son calculés
+              À noter également que les estimations de livraison et les frais d&apos;expédition varient en fonction des pays et son calculés
               automatiquement à la prochaine étape.
             </li>
           </ul>

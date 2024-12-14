@@ -58,7 +58,7 @@ export default function Panier() {
         <h1 className="uppercase font-medium text-3xl">Votre panier</h1>
         <ul  className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-8">
           {cart.map((item, index) => (
-            <li key={item.id} className="flex flex-col items-center justify-center gap-3" key={`${item.variant_id}-${item.size}-${index}`}>
+            <li className="flex flex-col items-center justify-center gap-3" key={`${item.variant_id}-${item.size}-${index}`}>
               <Image height={150} width={150} src={item.image} alt={item.name} />
               <h1 className="uppercase font-medium text-2xl">{item.name}</h1>
               <p>Taille : {item.size}</p>

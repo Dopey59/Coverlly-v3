@@ -5,8 +5,7 @@ import Navbar from "../../app/components/Navbar";
 import { loadStripe } from "@stripe/stripe-js";
 import useGeolocation from "../../app/hooks/useGeolocation"; // Assurez-vous d'avoir créé ce hook séparément
 import Details from '../../app/components/details'
-import { addToCart } from "../../app/utils/cart";
-import Logo from '../../app/assets/images/elements/coverlly.png'
+// import { addToCart } from "../../app/utils/cart";
 import Link from "next/link";
 import "/app/globals.css";
 
