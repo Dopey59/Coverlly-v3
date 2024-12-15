@@ -2,11 +2,12 @@
 
 // import Header from './ui/Header'
 
-import ProductCarousel from './ui/ProductsCarousel'
+import CarouselV2 from './components/CarouselProductV2'
+// import ProductCarousel from './ui/ProductsCarousel'
 import Made from './ui/MadeWithLove'
 import {HeaderV2} from './ui/HeaderV2'
 import { PlaceholdersAndVanishInputDemo} from './ui/Newsletter'
-import Badges from './ui/Badges'
+// import Badges from './ui/Badges'
 // import Navbar from './components/Navbar'
 // import Footer from './components/Footer'
 import Carousel from './ui/Carousel'
@@ -19,10 +20,11 @@ return (
     
       <HeaderV2/>
       {/* <Header/> */}
-      <Carousel/>
-      <ProductCarousel/>
+      <CarouselV2/>
+      {/* <ProductCarousel/> */}
       <Made/>
-      <Badges/>
+      {/* <Badges/> */}
+      <Carousel/>
       <PlaceholdersAndVanishInputDemo/>
       {/* <CookieConsentBanner /> */}
     </div>
