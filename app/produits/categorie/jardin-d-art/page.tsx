@@ -20,9 +20,9 @@ export default async function JardinDart() {
   return (
     <div>
       <div className="bg-gray-100/50 w-full sm:h-auto h-auto gap-4 md:p-5 p-4 flex justify-start items-start flex-col">
-        <h1 className="text-2xl sm:text-5xl font-bold ">Jardin d'art</h1>
+        <h1 className="text-2xl sm:text-5xl font-bold ">Jardin d&apos;art</h1>
         <p className="text-base sm:text-xl text-gray-900 sm:max-w-screen-2xl text-pretty ">
-        Ce style de design à fleurs s'inspire fortement des motifs "Arts & Crafts", un mouvement artistique du XIXe siècle mené par William Morris en Angleterre.
+        Ce style de design à fleurs s&apos;inspire fortement des motifs Arts & Crafts, un mouvement artistique du XIXe siècle mené par William Morris en Angleterre.
          Ce style se caractérise par des motifs floraux détaillés, symétriques et répétitifs, souvent inspirés par la nature,*
         avec des couleurs riches et une touche vintage.
         </p>
