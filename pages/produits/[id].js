@@ -8,11 +8,11 @@ import Details from '../../app/components/details'
 // import { addToCart } from "../../app/utils/cart";
 import Link from "next/link";
 import "/app/globals.css";
+import PrelineScript from "../../app/components/PrelineScript";
 
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
  
-
 const ProductDetail = ({ product, error }) => {
   const { sync_product, sync_variants } = product || {};
   const { name, thumbnail_url } = sync_product || {};
@@ -176,6 +176,7 @@ const ProductDetail = ({ product, error }) => {
   return (
     <article>
       <Navbar />
+      <PrelineScript/>
         <div className="grid lg:grid-cols-2 grid-cols-1 p-4 place-items-center sm:h-screen w-full">
             <div className="flex flex-col md:p-6 p-3 items-center text-center">
                 <h1 className="uppercase font-bold md:text-4xl text-2xl sm:w-3/4">
@@ -214,7 +215,6 @@ const ProductDetail = ({ product, error }) => {
             <div className="flex flex-col gap-5 mt-10 sm:mt-5">
                   <label htmlFor="size-selector">Choisir une taille :</label>
                   <div className="relative flex gap-2 items-center">
-                  
                     <select
                     id="size-selector"
                     value={selectedSize}
@@ -227,7 +227,6 @@ const ProductDetail = ({ product, error }) => {
                         </option>
                     ))}
                     </select>
-                   
                   </div>
 
                 {/* A roujeter dynamiquement avec useState */}
@@ -263,7 +262,6 @@ const ProductDetail = ({ product, error }) => {
                   </div>
                 </div>
                 <hr />  
-
 
                 <div className="flex flex-col sm:flex-row py-4 md:justify-start items-center gap-6 ">
                     <button

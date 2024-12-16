@@ -14,14 +14,14 @@ export default function Details() {
           </DisclosureButton>
           <DisclosurePanel className="mt-2 text-sm/5 text-white">
             <ul className='list-disc mx-5 gap-2 flex flex-col'>
-              <li>100 % néoprène</li>
+              <li>Matière 100 % néoprène</li>
               <li>Poids de la housse 13&quot; : 220 g (6.49 oz)</li>
               <li>Poids de la housse 15″ : 250 g (8.8 oz)</li>
               <li>Léger et résistant à l&apos;eau, à la graisse et à la chaleur</li>
               <li>Doublure intérieure en fausse fourrure</li>
-              <li>Face avant personnalisable, face arrière noir solide</li>
+              <li>Face avant imprimé, face arrière noir solide</li>
               <li>Design unique et sur mesure</li>
-              <li>Rembourrage</li>
+              <li>Rembourrage intérieur</li>
             </ul>
           </DisclosurePanel>
         </Disclosure>

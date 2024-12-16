@@ -1,13 +1,13 @@
 "use client"
 
 // import Header from './ui/Header'
-
 import CarouselV2 from './components/CarouselProductV2'
-// import ProductCarousel from './ui/ProductsCarousel'
 import Made from './ui/MadeWithLove'
 import {HeaderV2} from './ui/HeaderV2'
 import { PlaceholdersAndVanishInputDemo} from './ui/Newsletter'
-// import Badges from './ui/Badges'
+import Badges from './ui/Badges'
+import NewIn from './ui/NewIn'
+
 // import Navbar from './components/Navbar'
 // import Footer from './components/Footer'
 import Carousel from './ui/Carousel'
@@ -17,14 +17,13 @@ export default function Home() {
 
 return (
   <div className='overflow-x-hidden'>
-    
       <HeaderV2/>
       {/* <Header/> */}
       <CarouselV2/>
-      {/* <ProductCarousel/> */}
+      <NewIn/>
       <Made/>
-      {/* <Badges/> */}
       <Carousel/>
+      <Badges/>
       <PlaceholdersAndVanishInputDemo/>
       {/* <CookieConsentBanner /> */}
     </div>

@@ -14,7 +14,11 @@ import Fish from '../assets/images/products/fish.png';
 
 export default function CarouselV2() {
   return (
-    <div className="h-auto relative flex justify-center items-center sm:my-44 my-14">
+    <>
+     <div className="w-full flex justify-center md:block md:mx-4 py-6">
+        <h1 className="lg:text-7xl md:my-8 my-10 sm:text-5xl uppercase text-4xl font-black bg-black text-white p-2 w-fit rounded">Idées pour offrir</h1>
+     </div>
+    <div className="h-auto relative w-full flex justify-center items-center ">
       {/* Parallax Background */}
       <div
         className="swiper-parallax-bg"
@@ -72,7 +76,7 @@ export default function CarouselV2() {
                 placeholder="blur" // Pour le chargement progressif (optionnel)
                 />
             </Link>
-                <h1 placeholder="blur" className="absolute bottom-10 text-2xl text-white font-medium">Un Beau tigre</h1>
+                <h1 placeholder="blur" className="absolute bottom-5 md:bottom-10 text-2xl  font-medium">Eyes Of Tiger</h1>
             </div>
         </SwiperSlide>
 
@@ -87,7 +91,7 @@ export default function CarouselV2() {
                 placeholder="blur"
                 />
           </Link>
-            <h1 placeholder="blur" className="absolute bottom-10 text-2xl text-white font-medium">Butt Erfly</h1>
+            <h1 placeholder="blur" className="absolute bottom-5 md:bottom-10 text-2xl  font-medium">Butt Erfly</h1>
           </div>
         </SwiperSlide>
 
@@ -102,7 +106,7 @@ export default function CarouselV2() {
                 placeholder="blur"
                 />
           </Link>
-            <h1 placeholder="blur" className="absolute bottom-10 text-2xl text-white font-medium">Money Winter</h1>
+            <h1 placeholder="blur" className="absolute bottom-5 md:bottom-10 text-2xl  font-medium">Money Winter</h1>
           </div>
         </SwiperSlide>
 
@@ -117,7 +121,7 @@ export default function CarouselV2() {
                 placeholder="blur"
                 />
           </Link>
-            <h1 placeholder="blur" className="absolute bottom-10 text-2xl text-white font-medium">En Roue Libre</h1>
+            <h1 placeholder="blur" className="absolute bottom-5 md:bottom-10 text-2xl  font-medium">En Roue Libre</h1>
           </div>
         </SwiperSlide>
 
@@ -132,10 +136,11 @@ export default function CarouselV2() {
                 placeholder="blur"
                 />
           </Link>
-            <h1 placeholder="blur" className="absolute bottom-10 text-2xl text-white font-medium">On S&apos;en Fish</h1>
+            <h1 placeholder="blur" className="absolute bottom-5 md:bottom-10 text-2xl  font-medium">On S&apos;en Fish</h1>
           </div>
         </SwiperSlide>
       </Swiper>
     </div>
+    </>
   );
 }
