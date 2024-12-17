@@ -6,7 +6,7 @@ import Made from './ui/MadeWithLove'
 import {HeaderV2} from './ui/HeaderV2'
 import { PlaceholdersAndVanishInputDemo} from './ui/Newsletter'
 import Badges from './ui/Badges'
-import NewIn from './ui/NewIn'
+// import NewIn from './ui/NewIn'
 
 // import Navbar from './components/Navbar'
 // import Footer from './components/Footer'
