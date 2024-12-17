@@ -25,8 +25,6 @@ export default async function ProductsPage() {
                 <h1 className="uppercase font-black md:text-6xl text-3xl">Catalogue</h1>
                 <h4 className="text-center text-sm/6 sm:text-base font-bold">⏰ Promotions terminées le 24 Décembre ⏰</h4>
                 {/* <p className="text-center text-lg">Découvre dès maintenant notre large gamme de housses pour pc portable.</p> */}
-                <p className="text-center text-lg">🏷️ -10% Avec le code : HOHO24 - à appliquer lors de votre passage en caisse</p>
-
             </div>
    
             {/* Affichage des produits */}

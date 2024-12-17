@@ -20,7 +20,7 @@ return (
       <HeaderV2/>
       {/* <Header/> */}
       <CarouselV2/>
-      <NewIn/>
+      {/* <NewIn/> */}
       <Made/>
       <Carousel/>
       <Badges/>

@@ -1,39 +1,66 @@
-import Image from "next/image"
-import Link from "next/link"
-import Emeraude from '../assets/images/products/emeraude.jpg'
+'use client';
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
 
-export default function NewIn(){
-    return(
-        <>
-        <section>
-            <div className="relative sm:mt-44 w-auto mt-10">
-                <div className="relative xl:flex-row max-w-md-screen flex flex-col xl:justify-evenly items-center md:p-10 sm:gap-0 gap-1 ">
-                    <div className="bg-gray-100 max-w-screen-2xl sm:p-14 p-3">
-                        <div className="flex items-start mx-4 flex-col max-w-xl gap-5">
-                            <h1 className="text-3xl sm:text-6xl font-black">Jardin d&apos;Art</h1>
-                            <h3 className="text-xl text-gray-500">- Découvrez notre catégorie fleurale de la semaine</h3>
-                            <div className="text-base text-balance">
-                                <p className="text-pretty">Chez Coverlly, on aime vous surprendre avec des designs décalés, mais on sait aussi mettre les mains dans la terre pour
-                                cultiver des classiques.
-                                <br /><br /> Notre collection Jardin d’Art vous transporte dans un univers où les fleurs prennent racine dans l’élégance et la poésie.
-                                 Des motifs inspirés de l’artisanat d’antan, des jardins luxuriants et de la beauté intemporelle…
-                                 Comme quoi, on sait rester sérieux.
-                                 <br /><br />Parfois. <br /><br />
-                                Mais attention, faut pas pousser mémé dans les orties : ici, le style est soigné, les finitions impeccables
-                                et chaque housse est une petite œuvre d’art à emporter partout. Parce que même en terrain fleuri, Coverlly garde la main verte…</p>
-                            </div>
-                            <Link 
-                            className="border-black border-2 p-2 rounded duration-500 hover:duration-300 ease-in-out
-                            transition hover:bg-black hover:text-white w-44 text-center"
-                            href="/produits/categorie/jardin-d-art">
-                             Découvrir
-                            </Link>
-                        </div>
-                    </div>
-                    <Image className="sm:rounded-xl rounded-full p-4" alt="" width={800} height={800} src={Emeraude}/>
-                </div>
-            </div>
-        </section>
-        </>
-    )
+export default function NewIn() {
+  const container = useRef(null);
+
+  useEffect(() => {
+    const tl = gsap.timeline({ repeat: -1, yoyo: true });
+
+    // Animation des lettres : Scale, Translate et Rotation
+    tl.to('.letter', {
+      scale: 1.2,
+      rotation: 15,
+      duration: 1,
+      transformOrigin: 'center center',
+      ease: 'power2.inOut',
+      stagger: 0.2,
+    })
+      .to('.letter', {
+        scale: 1,
+        rotation: -15,
+        duration: 1,
+        ease: 'power2.inOut',
+        stagger: 0.2,
+      });
+  }, []);
+
+  return (
+    <div
+      ref={container}
+      className='flex justify-center items-center h-96 text-white bg-zinc-800'
+    >
+      <svg width="600" height="200" viewBox="0 0 600 200">
+        {/* Lettre 1 */}
+        <text x="50" y="100" fontSize="60" className="letter" fill="white">
+          C
+        </text>
+        {/* Lettre 2 */}
+        <text x="130" y="100" fontSize="60" className="letter" fill="white">
+          O
+        </text>
+        {/* Lettre 3 */}
+        <text x="210" y="100" fontSize="60" className="letter" fill="white">
+          V
+        </text>
+        {/* Lettre 4 */}
+        <text x="290" y="100" fontSize="60" className="letter" fill="white">
+          E
+        </text>
+        {/* Lettre 5 */}
+        <text x="370" y="100" fontSize="60" className="letter" fill="white">
+          R
+        </text>
+        {/* Lettre 6 */}
+        <text x="450" y="100" fontSize="60" className="letter" fill="white">
+          L
+        </text>
+        {/* Lettre 7 */}
+        <text x="530" y="100" fontSize="60" className="letter" fill="white">
+          Y
+        </text>
+      </svg>
+    </div>
+  );
 }

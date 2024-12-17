@@ -23,7 +23,7 @@ export default async function JardinDart() {
         <h1 className="text-2xl sm:text-5xl font-bold ">Jardin d&apos;art</h1>
         <p className="text-base sm:text-xl text-gray-900 sm:max-w-screen-2xl text-pretty ">
         Ce style de design à fleurs s&apos;inspire fortement des motifs Arts & Crafts, un mouvement artistique du XIXe siècle mené par William Morris en Angleterre.
-         Ce style se caractérise par des motifs floraux détaillés, symétriques et répétitifs, souvent inspirés par la nature,*
+         Ce style se caractérise par des motifs floraux détaillés, symétriques et répétitifs, souvent inspirés par la nature,
         avec des couleurs riches et une touche vintage.
         </p>
       </div>
