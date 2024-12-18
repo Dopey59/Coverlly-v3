@@ -1,6 +1,11 @@
 import Logo from '../assets/images/elements/coverlly.png'
 import Image from 'next/image'
+import { Metadata } from 'next'
 
+export const metadata: Metadata = {
+    title: "Coverlly - A propos",
+    description: "Coverlly est une entreprise revisitant de manière humoristique les accessoires de bureautique - ordinateur, de façon originale et fun."
+  };
 
 export default function About(){
     return(

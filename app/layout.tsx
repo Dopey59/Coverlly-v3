@@ -7,7 +7,11 @@ import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Coverlly - Housse de protection pc portable",
-  description: "Découvrez Coverlly, la boutique spécialisée dans les housses de protection et accessoire pour PC portable alliant style, humour subtil et designs artistiques uniques. Protégez votre ordinateur avec élégance et créativité."
+  description: "Découvrez Coverlly, la boutique spécialisée dans les housses de protection et accessoire pour PC portable alliant style, humour subtil et designs artistiques uniques. Protégez votre ordinateur avec élégance et créativité.",
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
