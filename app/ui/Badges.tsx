@@ -20,7 +20,7 @@ export default function Badges(){
                 <div className="bg-gray-400 w-4 h-0.5"></div>
             </div>
             <div className="mt-5">
-                <h3 className="text-lg font-semibold text-gray-800">Paiement Sécurisé</h3>
+                <h1 className="text-lg font-semibold text-gray-800">Paiement Sécurisé</h1>
                 <p className="mt-1 text-gray-600">Visa, MasterCard, Google Pay... </p>
             </div>
         </div>
@@ -33,7 +33,7 @@ export default function Badges(){
                 <div className="bg-gray-400 w-4 h-0.5"></div>
             </div>
             <div className="mt-5">
-                <h3 className="text-lg font-semibold text-gray-800">Livraison Rapide</h3>
+                <h1 className="text-lg font-semibold text-gray-800">Livraison Rapide</h1>
                 <p className="mt-1 text-gray-600">2 à 5 jours ouvrés</p>
             </div>
         </div>
@@ -46,7 +46,7 @@ export default function Badges(){
                 <div className="bg-gray-400 w-4 h-0.5"></div>
             </div>
             <div className="mt-5">
-                <h3 className="text-lg font-semibold text-gray-800">Eco-Friendly</h3>
+                <h1 className="text-lg font-semibold text-gray-800">Eco-Friendly</h1>
                 <p className="mt-1 text-gray-600">Production à la commande </p>
             </div>
         </div>
@@ -59,7 +59,7 @@ export default function Badges(){
                 <div className="bg-gray-400 w-4 h-0.5"></div>
             </div>
             <div className="mt-5">
-                <h3 className="text-lg font-semibold text-gray-800">24/7 Support</h3>
+                <h1 className="text-lg font-semibold text-gray-800">24/7 Support</h1>
                 <p className="mt-1 text-gray-600">Un SAV compréhensif et humain</p>
             </div>
         </div>

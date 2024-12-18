@@ -14,7 +14,7 @@ export default function MadeWithLove(){
             <div className="p-3 flex flex-col lg:gap-16 gap-10 justify-center items-center ">
                 <div className="flex items-center justify-center">
                     <div className="flex items-center gap-4">
-                        <h1 className="lg:text-7xl text-6xl font-black uppercase">Conçues avec <span className="text-[#ff847c]">amour</span></h1>
+                        <h1 className="lg:text-7xl text-6xl font-black uppercase">Conçues avec amour</h1>
                     </div>
                 </div>
                 <div className="flex flex-col rounded-xl shadow-2xl backdrop-blur-md bg-white p-6 gap-5 max-w-screen-md mx-auto">
