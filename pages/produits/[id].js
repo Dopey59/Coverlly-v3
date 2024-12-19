@@ -196,7 +196,7 @@ const ProductDetail = ({ product, error }) => {
                     <h1 className="uppercase font-bold md:text-4xl text-2xl mt-4">Son Histoire</h1>
                     <p className="font-regular sm:w-full leading-relaxed lg:text-lg">
                     Une housse d’ordinateur, c’est plus qu’un accessoire : c’est une déclaration. Avec nos designs à la fois artistiques et malicieusement originaux, chaque housse devient une œuvre d’art portable qui fera sourire même les plus sérieux. Entre protection solide et inspiration subtile, ces pochettes transforment le quotidien en une petite exposition privée. Sortez-la de votre sac et laissez l’art parler pour vous – un mélange parfait de style, d’humour et de créativité.</p>
-                    <span className="text-gray-600">Pour Mackbook et ordinateur portable.</span>
+                    <span className="text-gray-600">Pour Macbook et ordinateur portable.</span>
                 </div>
 
                 <div className="mt-6 sm:mt-2">
