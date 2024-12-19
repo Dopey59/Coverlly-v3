@@ -9,7 +9,7 @@ export default function MadeWithLove(){
     <section className="w-full sm:mt-44 mt-10">
         <article className="grid md:grid-cols-2">
             <div className="">
-                <Image priority className=" drop-shadow-2xl" src={Pov1} alt="image housse de protection - pc portable"/>
+                <Image priority width={500} height={500} className=" drop-shadow-2xl" src={Pov1} alt="image housse de protection - pc portable"/>
             </div>
             <div className="p-3 flex flex-col lg:gap-16 gap-10 justify-center items-center ">
                 <div className="flex items-center justify-center">

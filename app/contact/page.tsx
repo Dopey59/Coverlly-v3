@@ -51,7 +51,7 @@ const ContactUs: React.FC = () => {
   return (
     <>
       <section>
-        <div className="h-screen w-full p-6 sm:p-0 mx-auto lg:px-8 sm:flex sm:justify-center sm:flex-col gap-6 sm:items-center anim-contact">
+        <div className=" w-full p-6 sm:p-14 mx-auto lg:px-8 sm:flex sm:justify-center sm:flex-col gap-6 sm:items-center anim-contact">
           <div className="mx-auto max-w-2xl text-center">
             <div className="flex flex-col gap-3">
               <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
