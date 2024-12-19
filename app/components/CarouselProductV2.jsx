@@ -33,8 +33,8 @@ export default function CarouselV2() {
   }, []);
   return (
     <>
-     <div className="relative h-4 flex justify-center md:block md:mx-4 my-10 sm:mt-24 mt-10">
-        <h1 className="animated-text sm:text-5xl uppercase text-3xl text-center font-black w-fit rounded">Quel housse est faite pour toi ?</h1>
+     <div className="relative h-4 flex justify-center md:block md:mx-4 sm:my-24 my-10">
+        <h1 className="animated-text sm:text-5xl text-3xl text-center text-balance font-bold text-zinc-800">Quel housse est faite pour toi ?</h1>
      </div>
      <Swiper
       modules={[EffectCards, Pagination, Autoplay]} // Modules nécessaires pour l'effet Cards

@@ -2,24 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .animated-background {
     background-size: 100%;
-
     -webkit-animation: animation 3s ease infinite;
     -moz-animation: animation 3s ease infinite;
     animation: animation 3s ease infinite;
 }
+  
 
 @keyframes animation {
-    0%,
-    100% {
-        background-position: 0% 50%;
-    }
-    
-    50% {
-        background-position: 100% 50%;
-    }
+	0% {
+		background-position: 0% 50%;
+	  }
+	  50% {
+		background-position: 100% 50%;
+	  }
+	  100% {
+		background-position: 0% 50%;
+	  }
 }
 
 .anim-bg {
@@ -38,6 +38,14 @@
 	background: linear-gradient(-45deg, #009dff, #2f5e85, #e98bde, #009dff);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
+}
+
+.anim-text {
+  background: linear-gradient(-45deg, #009dff, #2f5e85, #e98bde, #009dff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 15s ease infinite;
 }
 
 .anim-button {
@@ -93,7 +101,7 @@
   
   /* Premier élément */
   .text-item:nth-child(1) {
-	animation-delay: 3s;
+	animation-delay: 1.5s;
   }
   
   /* Deuxième élément */
@@ -103,7 +111,8 @@
   
   @media (max-width: 640px) {
 	.text-wrapper {
-		 /* Ajustez selon la taille de votre texte */
+		position: relative; /* Pour permettre le positionnement absolu des items */
+		height: 1.5em; /* Ajustez selon la taille de votre texte */
 		overflow: hidden; /* Cache les textes sortant de la zone visible */
 		width: 100%;
 	  }

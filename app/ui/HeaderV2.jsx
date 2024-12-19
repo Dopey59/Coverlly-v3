@@ -3,7 +3,7 @@ import { BackgroundLines } from "../components/ui/background-lines";
 import { TextGenerateEffect } from "../components/ui/text-generate-effect";
       
   export function HeaderV2() {
-    const words = `Shoppez votre housse d'ordinateur portable et rendez vos journées plus funs !`
+    const words = `Protégez votre PC avec une touche d'art et de fun !`
 
     return (
       <BackgroundLines className="anim-bg flex gap-5 items-center justify-center w-full flex-col px-4">
@@ -13,9 +13,6 @@ import { TextGenerateEffect } from "../components/ui/text-generate-effect";
       <h2 className="text-center">
       <TextGenerateEffect words={words} />
       </h2>
-      <p className="max-w-xl mx-auto text-sm md:text-base text-neutral-100 text-center">
-        Plongez dans un univers remplis d&apos;humour et de références.
-      </p>
     </BackgroundLines>
   );
 }

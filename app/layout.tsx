@@ -25,16 +25,16 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={`antialiased`}>
-        <div className="bg-black text-white sm:p-4 p-3 flex justify-center items-center ">
+        {/* <div className="bg-black text-white sm:p-4 p-3 flex justify-center items-center ">
           <ul className="text-wrapper">
             <li className="text-item text-base">
-              🏷️ -10% avec le code: HOHO24 à coller en caisse 
+              🏷️ -10% avec le code: HOHO24
             </li>
             <li className="text-item text-base">
               🚚 Coverlly livre partout en Europe !
             </li>
           </ul>
-        </div>
+        </div> */}
         <ClientNavbar /> {/* Affiche conditionnellement la Navbar */}
         {children}
         <Analytics />

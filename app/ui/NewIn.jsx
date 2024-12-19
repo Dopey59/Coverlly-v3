@@ -1,66 +1,31 @@
-'use client';
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
+import { useState } from "react";
+import { copyToClipboard } from "../utils/clipboard";
 
-export default function NewIn() {
-  const container = useRef(null);
+export default function ClipboardExample() {
+  const [text, setText] = useState("HOHO24");
+  const [isCopied, setIsCopied] = useState(false);
 
-  useEffect(() => {
-    const tl = gsap.timeline({ repeat: -1, yoyo: true });
+  const handleCopy = async () => {
+    const success = await copyToClipboard(text);
+    setIsCopied(success);
 
-    // Animation des lettres : Scale, Translate et Rotation
-    tl.to('.letter', {
-      scale: 1.2,
-      rotation: 15,
-      duration: 1,
-      transformOrigin: 'center center',
-      ease: 'power2.inOut',
-      stagger: 0.2,
-    })
-      .to('.letter', {
-        scale: 1,
-        rotation: -15,
-        duration: 1,
-        ease: 'power2.inOut',
-        stagger: 0.2,
-      });
-  }, []);
+    // Réinitialiser l'état après 2 secondes
+    if (success) {
+      setTimeout(() => setIsCopied(false), 2000);
+    }
+  };
 
   return (
-    <div
-      ref={container}
-      className='flex justify-center items-center h-96 text-white bg-zinc-800'
-    >
-      <svg width="600" height="200" viewBox="0 0 600 200">
-        {/* Lettre 1 */}
-        <text x="50" y="100" fontSize="60" className="letter" fill="white">
-          C
-        </text>
-        {/* Lettre 2 */}
-        <text x="130" y="100" fontSize="60" className="letter" fill="white">
-          O
-        </text>
-        {/* Lettre 3 */}
-        <text x="210" y="100" fontSize="60" className="letter" fill="white">
-          V
-        </text>
-        {/* Lettre 4 */}
-        <text x="290" y="100" fontSize="60" className="letter" fill="white">
-          E
-        </text>
-        {/* Lettre 5 */}
-        <text x="370" y="100" fontSize="60" className="letter" fill="white">
-          R
-        </text>
-        {/* Lettre 6 */}
-        <text x="450" y="100" fontSize="60" className="letter" fill="white">
-          L
-        </text>
-        {/* Lettre 7 */}
-        <text x="530" y="100" fontSize="60" className="letter" fill="white">
-          Y
-        </text>
-      </svg>
+    <>
+    <div className="bg-gray-100 h-64 sm:my-44 my-20 flex justify-center items-center">
+      <div className="sm:my-64 my-24 lg:flex-row flex flex-col lg:justify-center items-center md:gap-4 gap-6">
+      <h1 className="text-zinc-800 max-md-xl sm:text-5xl text-3xl text-center text-balance">Code de réduction -10% avec HOHO24</h1>
+      <button id="copy"  className="flex flex-col gap-2 items-center" onClick={handleCopy}>
+      <i data-feather="clipboard"></i>
+          {isCopied ? "Texte copié ✅" : ""}
+        </button>
+      </div>
     </div>
+    </>
   );
 }

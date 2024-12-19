@@ -6,7 +6,7 @@ export default function Footer(){
   const footerRef = useRef(null); // Référence pour l'arrêt au footer
   return(
       <>
-      <footer ref={footerRef} className="relative bg-black text-white py-8">
+      <footer ref={footerRef} className="relative bg-gray-50 text-zinc-800 py-8">
         <div className="container mx-auto px-4">
           {/* <!-- Grid container --> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -52,7 +52,7 @@ export default function Footer(){
           </div>
 
           {/* <!-- Footer bottom --> */}
-          <div className="mt-8 border-t border-gray-300 pt-4 text-center text-sm text-white">
+          <div className="mt-8 border-t border-gray-300 pt-4 text-center text-sm text-zinc-900">
             &copy; 2024 Coverlly. Tous droits réservés. Créé et développé par William.P
           </div>
         </div>

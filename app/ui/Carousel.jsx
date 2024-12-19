@@ -6,12 +6,12 @@ export default function Carousel() {
     {/*<!-- Slider --> */}
     <div className="px-4 lg:px-8 sm:mt-44 mt-10">
       <div>
-          <h1 className="lg:text-7xl my-6 sm:text-5xl uppercase text-3xl font-black bg-black text-white p-2 w-fit rounded">Les Zartistes</h1>
+          <h1 className="lg:text-7xl my-6 sm:text-5xl text-3xl font-bold text-zinc-800">Les Zartistes</h1>
       </div>
         <div data-hs-carousel='{
             "loadingClasses": "opacity-0"
           }' className="relative">
-          <div className="hs-carousel relative overflow-hidden w-full h-[30rem]  bg-gray-100 rounded-2xl">
+          <div className="hs-carousel relative overflow-hidden w-full h-[30rem] bg-gray-100 rounded-2xl">
             <div className="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
               {/* <!-- Item --> */}
               <div className="hs-carousel-slide">

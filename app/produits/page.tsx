@@ -23,7 +23,7 @@ export default async function ProductsPage() {
           <div className="md:mx-14  flex flex-col justify-center items-center">
             <div className="p-6 flex gap-5 flex-col items-center justify-center text-white anim-product h-96  w-screen">
                 <h1 className="uppercase font-black md:text-6xl text-3xl">Catalogue</h1>
-                <h4 className="text-center text-sm/6 sm:text-base font-bold">⏰ Promotions terminées le 24 Décembre ⏰</h4>
+                <h4 className="text-center text-md sm:text-base text-balance font-bold">⏰ Promotions terminées le 24 Décembre ⏰</h4>
                 {/* <p className="text-center text-lg">Découvre dès maintenant notre large gamme de housses pour pc portable.</p> */}
             </div>
    
