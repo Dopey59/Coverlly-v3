@@ -177,8 +177,8 @@ const ProductDetail = ({ product, error }) => {
     <article>
       <Navbar />
       <PrelineScript/>
-        <div className="grid lg:grid-cols-2 grid-cols-1 p-4 place-items-center sm:h-screen w-full">
-            <div className="sm:mt-0 mt-10  flex flex-col md:p-6 p-3 items-center text-center">
+        <div className="grid lg:grid-cols-2 grid-cols-1 p-4 h-screen w-full">
+            <div className=" mt-10  flex flex-col md:p-6 p-3 items-center text-center">
                 <h1 className="uppercase font-bold md:text-4xl text-2xl sm:w-3/4">
                     {`Pochette de protection - ${name || "Nom non spécifié"} (${selectedSize})`}
                 </h1>
@@ -191,9 +191,9 @@ const ProductDetail = ({ product, error }) => {
                 </div>
             </div>
 
-            <div className="flex flex-col sm:gap-8 sm:p-6 w-full">
-                <div className="bg-gray-100 rounded p-6  flex flex-col gap-6 max-w-screen-md text-balance">
-                    <h1 className="uppercase font-bold md:text-4xl text-2xl mt-12">Son Histoire</h1>
+            <div className="flex flex-col sm:gap-8 sm:p-6 mt-14 sm:mt-0 w-full">
+                <div className="bg-gray-100 rounded p-6 flex flex-col gap-6 max-w-screen-md text-balance">
+                    <h1 className="uppercase font-bold md:text-4xl text-2xl mt-4">Son Histoire</h1>
                     <p className="font-regular sm:w-full leading-relaxed lg:text-lg">
                     Une housse d’ordinateur, c’est plus qu’un accessoire : c’est une déclaration. Avec nos designs à la fois artistiques et malicieusement originaux, chaque housse devient une œuvre d’art portable qui fera sourire même les plus sérieux. Entre protection solide et inspiration subtile, ces pochettes transforment le quotidien en une petite exposition privée. Sortez-la de votre sac et laissez l’art parler pour vous – un mélange parfait de style, d’humour et de créativité.</p>
                     <span className="text-gray-600">Pour Mackbook et ordinateur portable.</span>
