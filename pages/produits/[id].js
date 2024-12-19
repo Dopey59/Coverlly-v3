@@ -178,7 +178,7 @@ const ProductDetail = ({ product, error }) => {
       <Navbar />
       <PrelineScript/>
         <div className="grid lg:grid-cols-2 grid-cols-1 p-4 place-items-center sm:h-screen w-full">
-            <div className="flex flex-col md:p-6 p-3 items-center text-center">
+            <div className="sm:mt-0 mt-10  flex flex-col md:p-6 p-3 items-center text-center">
                 <h1 className="uppercase font-bold md:text-4xl text-2xl sm:w-3/4">
                     {`Pochette de protection - ${name || "Nom non spécifié"} (${selectedSize})`}
                 </h1>
@@ -187,22 +187,16 @@ const ProductDetail = ({ product, error }) => {
                 </div>
                 <div className="flex gap-3 items-center justify-center">
                   <p className="text-3xl">{selectedPrice.toFixed(2)}€</p>{/* Affiche le prix dynamique */}
-                  <span className=" text-gray-300 text-sm line-through">34.99€</span>
+                  <span className=" text-gray-500 text-sm line-through">34.99€</span>
                 </div>
             </div>
 
             <div className="flex flex-col sm:gap-8 sm:p-6 w-full">
-                {/* <div className="flex flex-col gap-6 max-w-screen-md">
-                    <h1 className="uppercase font-bold md:text-4xl text-2xl mt-24">Son histoire</h1>
-                    <p className="font-regular sm:w-full leading-relaxed lg:text-lg">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis cumque voluptate tempore aut cupiditate vitae, quisquam rerum alias architecto? Perspiciatis adipisci facilis nostrum deserunt ratione sapiente quia quo soluta dolor?
-                    </p>
-                </div> */}
-                <div className="flex flex-col gap-6 max-w-screen-md">
+                <div className="bg-gray-100 rounded p-6  flex flex-col gap-6 max-w-screen-md text-balance">
                     <h1 className="uppercase font-bold md:text-4xl text-2xl mt-12">Son Histoire</h1>
                     <p className="font-regular sm:w-full leading-relaxed lg:text-lg">
                     Une housse d’ordinateur, c’est plus qu’un accessoire : c’est une déclaration. Avec nos designs à la fois artistiques et malicieusement originaux, chaque housse devient une œuvre d’art portable qui fera sourire même les plus sérieux. Entre protection solide et inspiration subtile, ces pochettes transforment le quotidien en une petite exposition privée. Sortez-la de votre sac et laissez l’art parler pour vous – un mélange parfait de style, d’humour et de créativité.</p>
-                    <span className="text-gray-400">Pour Mackbook et ordinateur portable.</span>
+                    <span className="text-gray-600">Pour Mackbook et ordinateur portable.</span>
                 </div>
 
                 <div className="mt-6 sm:mt-2">
@@ -212,7 +206,7 @@ const ProductDetail = ({ product, error }) => {
             <Details/>
 
             {/* Sélecteur de taille */}
-            <div className="flex flex-col gap-5 mt-10 sm:mt-5">
+            <div className="bg-gray-100 rounded p-6 flex flex-col gap-5 mt-10 sm:mt-5">
                   <label htmlFor="size-selector">Choisir une taille :</label>
                   <div className="relative flex gap-2 items-center">
                     <select

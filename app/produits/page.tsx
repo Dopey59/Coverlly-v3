@@ -18,7 +18,7 @@ export default async function ProductsPage() {
     }
   console.log(products)
     return (
-        <div className="bg-white text-black">
+        <div className="bg-white text-black overflow-x-hidden">
           {/* Header Présentation */}
           <div className="md:mx-14  flex flex-col justify-center items-center">
             <div className="p-6 flex gap-5 flex-col items-center justify-center text-white anim-product h-96  w-screen">

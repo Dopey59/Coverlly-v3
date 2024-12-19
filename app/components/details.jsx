@@ -7,7 +7,7 @@ export default function Details() {
       <div className=" w-full max-w-lg divide-y divide-gray-100 rounded-xl bg-white/5">
         <Disclosure as="div" className="p-4" defaultOpen={false}>
           <DisclosureButton className="group flex w-full items-center justify-between">
-            <span className="text-lg font-medium text-white group-data-[hover]:text-white/80">
+            <span className="text-base font-medium text-white group-data-[hover]:text-white/80">
               Spécificités
             </span>
             <ChevronDownIcon className="size-5 fill-white" />
@@ -27,7 +27,7 @@ export default function Details() {
         </Disclosure>
         <Disclosure as="div" className="p-4">
           <DisclosureButton className="group flex w-full items-center justify-between">
-            <span className="text-lg font-medium text-white group-data-[hover]:text-white/80">
+            <span className="text-base font-medium text-white group-data-[hover]:text-white/80">
               Délais de livraison
             </span>
             <ChevronDownIcon className="size-5 fill-white" />
@@ -47,7 +47,7 @@ export default function Details() {
 
         <Disclosure as="div" className="p-4">
           <DisclosureButton className="group flex w-full items-center justify-between">
-            <span className="text-lg font-medium text-white group-data-[hover]:text-white/80">
+            <span className="text-base font-medium text-white group-data-[hover]:text-white/80">
               Choisir sa taille
             </span>
             <ChevronDownIcon className="size-5 fill-white" />

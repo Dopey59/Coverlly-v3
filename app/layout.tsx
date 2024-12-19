@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
+    <html lang="fr" className="">
       <body className={`antialiased`}>
         {/* <div className="bg-black text-white sm:p-4 p-3 flex justify-center items-center ">
           <ul className="text-wrapper">
