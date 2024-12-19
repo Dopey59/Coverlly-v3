@@ -2,7 +2,7 @@ import { useState } from "react";
 import { copyToClipboard } from "../utils/clipboard";
 
 export default function ClipboardExample() {
-  const [text, setText] = useState("HOHO24");
+  const [text] = useState("HOHO24");
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopy = async () => {
