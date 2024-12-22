@@ -7,6 +7,7 @@ import Badges from './ui/Badges'
 import NewIn from './ui/NewIn'
 import Carousel from './ui/Carousel'
 import './components/CookieConsentBanner'
+
 export default function Home() {
 
 return (
@@ -15,8 +16,8 @@ return (
       {/* <Header/> */}
       <div className='bg-gray-100 p-6'>
         <CarouselV2/>
-      </div>
       <NewIn/>
+      </div>
       <Made/>
       <Carousel/>
       <Badges/>

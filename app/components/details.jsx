@@ -3,12 +3,12 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 export default function Details() {
   return (
-    <div className=" w-full anim-product rounded max-w-lg mt-6 sm:mt-0 ">
-      <div className=" w-full max-w-lg divide-y divide-gray-100 rounded-xl bg-white/5">
+    <div className="w-full anim-product rounded max-w-lg mt-6 ">
+      <div className="w-full max-w-lg divide-y divide-gray-100 rounded-xl bg-white/5">
         <Disclosure as="div" className="p-4" defaultOpen={false}>
           <DisclosureButton className="group flex w-full items-center justify-between">
             <span className="text-base font-medium text-white group-data-[hover]:text-white/80">
-              Spécificités
+              Caractéristiques
             </span>
             <ChevronDownIcon className="size-5 fill-white" />
           </DisclosureButton>
@@ -53,7 +53,7 @@ export default function Details() {
             <ChevronDownIcon className="size-5 fill-white" />
           </DisclosureButton>
           <DisclosurePanel className="mt-2 text-sm/5 text-white">
-          <ul className='list-disc mx-5 gap-1 flex flex-col'>
+          <ul className='gap-2 flex flex-col'>
               <li>13 pouces : Longueur : 34.3cm | Largeur:  26.7cm | Hauteur:  1.5cm</li>
               <li>15 pouces : Longueur : 37.3cm | Largeur:  28.5cm | Hauteur:  1.5cm</li>
             </ul>

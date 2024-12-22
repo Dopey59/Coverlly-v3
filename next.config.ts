@@ -3,7 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['files.cdn.printful.com'],
+    domains: ['files.cdn.printful.com', 'images.unsplash.com'],
+
   },
   env: {
     API_TOKEN: process.env.API_TOKEN,

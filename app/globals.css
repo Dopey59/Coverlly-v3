@@ -8,7 +8,6 @@
     -moz-animation: animation 3s ease infinite;
     animation: animation 3s ease infinite;
 }
-  
 
 @keyframes animation {
 	0% {
@@ -137,3 +136,8 @@
 	  transform: translateX(-100%); /* Toujours hors écran */
 	}
   }  
+
+  .icon {
+    width: 44px; /* Largeur */
+    height: 44px; /* Hauteur */
+  }

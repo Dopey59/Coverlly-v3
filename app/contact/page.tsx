@@ -51,14 +51,14 @@ const ContactUs: React.FC = () => {
   return (
     <>
       <section>
-        <div className=" w-full p-6 sm:p-14 mx-auto lg:px-8 sm:flex sm:justify-center sm:flex-col gap-6 sm:items-center anim-contact">
+        <div className=" w-full p-6 sm:p-14 mx-auto lg:px-8 sm:flex sm:justify-center sm:flex-col gap-6 sm:items-center">
           <div className="mx-auto max-w-2xl text-center">
             <div className="flex flex-col gap-3">
-              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mt-10">
                 Contactez-nous !
               </h2>
               <div>
-                <p className="mt-2 text-lg leading-8 text-white">
+                <p className="mt-2 text-lg leading-8">
                   Une question ? Un doute ? Notre équipe est là pour répondre à tous vos besoins,
                   dans un délai de 24h à 48h !
                 </p>
@@ -69,7 +69,7 @@ const ContactUs: React.FC = () => {
           <form
             ref={formRef}
             onSubmit={sendEmail}
-            className="mx-auto relative mt-6 max-w-xl bg-white p-6 rounded-md shadow-md z-20"
+            className="mx-auto relative mt-6 max-w-xl bg-gray-50 p-6 rounded-md shadow-md z-20"
           >
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
               <div>

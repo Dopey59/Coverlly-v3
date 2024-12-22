@@ -1,15 +1,49 @@
 "use client"
 import React from 'react';
+import { useEffect, useState} from 'react';
 import Link from 'next/link';
 // import Image from 'next/image';
 // import Logo from '../assets/images/elements/Coverlly.png'
 
 export default function Navbar(){
+  const [isScrolling, setIsScrolling] = useState(false);
+  useEffect(() => {
+    let scrollTimeout;
+
+    const handleScroll = () => {
+      // L'utilisateur commence à scroller
+      setIsScrolling(true);
+
+      // Réinitialiser le timeout pour détecter l'arrêt
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+      }
+
+      // Planifier un timeout pour détecter quand le scroll s'arrête
+      scrollTimeout = setTimeout(() => {
+        setIsScrolling(false);
+      }, 150); // Temps après lequel on considère que l'utilisateur a arrêté de scroller
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Nettoyage lors du démontage du composant
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(scrollTimeout);
+    };
+  }, []);
+
   return(
       <>
       {/* <!-- ========== HEADER ========== --> */}
-      <header className="fixed  opacity-90 z-50 md:justify-start md:flex-nowrap w-full bg-white border-b border-gray-200">
-        <nav className="relative max-w-[85rem] w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 py-2 px-4 sm:px-6 lg:px-8">
+      <header id='navbar' className="fixed z-50 md:justify-start md:flex-nowrap w-full">
+      <nav
+          className={`relative max-w-screen w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 py-2 px-4 sm:px-6 lg:px-8 ${
+            isScrolling ? "duration-500 transition ease-in-out bg-opacity-80" : "bg-opacity-100"
+          } bg-white`}
+        >
+
           <div className="flex justify-between items-center gap-x-1">
             <Link className="flex-none font-semibold text-xl text-black focus:outline-none focus:opacity-80" href="/" aria-label="Brand">
               Coverlly

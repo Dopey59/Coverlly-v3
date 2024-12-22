@@ -11,7 +11,7 @@ export default function About(){
     return(
         <>
         {/* <!-- Blog Article --> */}
-        <div className="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div className="max-w-3xl px-4 pt-14 lg:pt-20 pb-12 sm:px-6 lg:px-8 mx-auto">
             <div className="max-w-2xl">
                 {/* <!-- Content --> */}
                 <div className="space-y-5 md:space-y-8">
