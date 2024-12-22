@@ -9,13 +9,14 @@ export default async function handler(req, res) {
     console.log("Clé API récupérée ? ", !!apiToken);
 
     try {
-      const promises = productIds.map((id) => {
+      const promises = productIds.map(async (id) => {
         console.log(`Envoi de la requête pour l'ID ${id}...`);
-        return fetch(`https://api.printful.com/store/products/${id}`, {
+        const res = await fetch(`https://api.printful.com/store/products/${id}`, {
           headers: {
             Authorization: `Bearer ${apiToken}`,
           },
-        }).then((res) => res.json());
+        });
+        return await res.json();
       });
 
       const results = await Promise.all(promises);
