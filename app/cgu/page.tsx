@@ -11,7 +11,7 @@ export default function CGU() {
         <>
          <section>
             <div>
-                <article className=" md:m-14 m-6  ">
+                <article className=" md:m-14 m-6 pt-20 ">
                     <div className="flex flex-col justify-center gap-5 max-w-screen-lg mx-auto">
                         <h1 className="uppercase font-black sm:text-3xl text-2xl">1. Objet des Conditions Générales d’Utilisation</h1>
                         <p className=" sm:w-full lg:text-base">Les présentes Conditions Générales d’Utilisation (CGU) ont pour objet de définir les modalités et conditions d’accès et d’utilisation du site internet Coverlly (ci-après « Coverlly »).

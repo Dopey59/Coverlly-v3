@@ -16,7 +16,7 @@ export default function Confidentialite(){
     return(
         <div>
             {/* <!-- Blog Article --> */}
-        <div className="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div className="max-w-3xl px-4 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto  pt-20 ">
             <div className="max-w-2xl">
                 {/* <!-- Content --> */}
                 <div className="space-y-5 md:space-y-8">
@@ -24,7 +24,7 @@ export default function Confidentialite(){
                         <h1 className="text-2xl font-bold md:text-4xl">Politique d’Utilisation des Cookies</h1>
                     </div>
                         <div className="space-y-8">
-                            <h2 className="text-2xl font-bold md:text-2xl mt-14">Qu&apos;est-ce qu&apos;un cookie ?</h2>
+                            <h2 className="text-2xl font-bold md:text-2xl mt-4">Qu&apos;est-ce qu&apos;un cookie ?</h2>
                             <p className="text-lg text-gray-800">
                             Un cookie est un petit fichier texte enregistré sur votre appareil (ordinateur, tablette ou smartphone) lorsque vous visitez un site web. Les cookies permettent au site de se souvenir de vos actions et préférences (comme le login, la langue et d’autres préférences d’affichage) pendant un certain temps.
                             </p>

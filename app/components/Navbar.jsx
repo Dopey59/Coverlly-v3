@@ -22,7 +22,7 @@ export default function Navbar(){
       // Planifier un timeout pour détecter quand le scroll s'arrête
       scrollTimeout = setTimeout(() => {
         setIsScrolling(false);
-      }, 150); // Temps après lequel on considère que l'utilisateur a arrêté de scroller
+      }, 350); // Temps après lequel on considère que l'utilisateur a arrêté de scroller
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -40,7 +40,7 @@ export default function Navbar(){
       <header id='navbar' className="fixed z-50 md:justify-start md:flex-nowrap w-full">
       <nav
           className={`relative max-w-screen w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 py-2 px-4 sm:px-6 lg:px-8 ${
-            isScrolling ? "duration-500 transition ease-in-out bg-opacity-80" : "bg-opacity-100"
+            isScrolling ? "duration-500 transition ease-in-out bg-opacity-80" : "duration-500 transition ease-in-out bg-opacity-100"
           } bg-white`}
         >
 
