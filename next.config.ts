@@ -4,7 +4,6 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['files.cdn.printful.com', 'images.unsplash.com'],
-
   },
   env: {
     API_TOKEN: process.env.API_TOKEN,
@@ -19,6 +18,14 @@ const nextConfig: NextConfig = {
         headers: [
           { key: 'x-robots-tag', value: 'index, follow' }, // Autorise l'indexation
         ],
+      },
+    ];
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/api/proxy',
+        destination: 'https://api.printful.com/store/products',
       },
     ];
   },
