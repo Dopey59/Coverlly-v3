@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     const { productIds } = req.body; // Liste des IDs de produits
     console.log("IDs de produits demandés : ", productIds);
 
-    const apiToken = process.env.NEXT_PUBLIC_API_TOKEN;
+    const apiToken = process.env.API_TOKEN;
     console.log("Clé API récupérée ? ", !!apiToken);
 
     try {

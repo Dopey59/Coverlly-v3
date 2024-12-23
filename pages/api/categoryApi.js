@@ -9,7 +9,7 @@ export const fetchSelectedProducts = async (productIds) => {
       try {
         const res = await fetch(`https://api.printful.com/store/products/${id}`, {
           headers: {
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_API_TOKEN}`,
+            Authorization: `Bearer ${process.env.API_TOKEN}`,
           },
         });
 
