@@ -13,7 +13,7 @@ export default function BlogCarousel() {
     <div className="max-w-[130vh] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
       <div className="flex flex-col sm:gap-2 gap-4 py-5">
         <h1 className="lg:text-7xl text-6xl font-bold text-zinc-800 ">Articles de  <span className='anim-text'>blogs</span></h1>
-        <h2 className="text-base text-gray-500 ">Apprenez-en d'avantages sur nos méthodes de confection, nos articles et bien plus encore !
+        <h2 className="text-base text-gray-500 ">Apprenez-en d&apos;avantages sur nos méthodes de confection, nos articles et bien plus encore !
         </h2>
       </div>
       {/* Carrousel principal */}
@@ -38,14 +38,14 @@ export default function BlogCarousel() {
         }}
         style={{ marginBottom: "20px" }}
       >
-        <SwiperSlide>
-          <Link className="group relative block rounded-xl focus:outline-none" href="/fabrication">
+         <SwiperSlide>
+          <Link className="group relative block rounded-xl focus:outline-none" href="/blog/article-4">
             <div className="shrink-0 relative rounded-xl overflow-hidden w-full h-[550px] before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t before:from-gray-900/70">
               <Image
                 width={900}
                 height={900}
                 className="size-full absolute top-0 start-0 object-cover"
-                src="https://images.unsplash.com/photo-1663433541063-ddab084d1126?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://images.unsplash.com/photo-1443916568596-df5a58c445e9?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Blog Image"
               />
             </div>
@@ -53,9 +53,9 @@ export default function BlogCarousel() {
             <div className="absolute bottom-0 inset-x-0 z-10">
               <div className="flex flex-col h-full p-4 sm:p-6">
                 <h3 className="text-lg sm:text-3xl font-semibold text-white group-hover:text-white/80 group-focus:text-white/80">
-                  Les coulisses de Coverlly {">"}
+                  Vous adorez nos housse et voici pourquoi {">"}
                 </h3>
-                <p className="mt-2 text-white/80">Nos méthodes de fabrication</p>
+                <p className="mt-2 text-white/80">Voici pourquoi vous aimez nos accessoires</p>
               </div>
             </div>
           </Link>
@@ -76,7 +76,7 @@ export default function BlogCarousel() {
             <div className="absolute bottom-0 inset-x-0 z-10">
               <div className="flex flex-col h-full p-4 sm:p-6">
                 <h3 className="text-lg sm:text-3xl font-semibold text-white group-hover:text-white/80 group-focus:text-white/80">
-                 Bien choisir sa housse d'ordinateur {">"}
+                 Bien choisir sa housse d&apos;ordinateur {">"}
                 </h3>
                 <p className="mt-2 text-white/80">Les critères importants</p>
               </div>
@@ -122,21 +122,22 @@ export default function BlogCarousel() {
             <div className="absolute bottom-0 inset-x-0 z-10">
               <div className="flex flex-col h-full p-4 sm:p-6">
                 <h3 className="text-lg sm:text-3xl font-semibold text-white group-hover:text-white/80 group-focus:text-white/80">
-                  5 raisons d’opter pour une housse {">"}
+                  5 raisons d&apos;opter pour une housse {">"}
                 </h3>
                 <p className="mt-2 text-white/80">La housse d'ordinateur, aussi pratique que stylée !</p>
               </div>
             </div>
           </Link>
         </SwiperSlide>
+
         <SwiperSlide>
-          <Link className="group relative block rounded-xl focus:outline-none" href="/blog/article-4">
+          <Link className="group relative block rounded-xl focus:outline-none" href="/fabrication">
             <div className="shrink-0 relative rounded-xl overflow-hidden w-full h-[550px] before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t before:from-gray-900/70">
               <Image
                 width={900}
                 height={900}
                 className="size-full absolute top-0 start-0 object-cover"
-                src="https://images.unsplash.com/photo-1443916568596-df5a58c445e9?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://images.unsplash.com/photo-1663433541063-ddab084d1126?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Blog Image"
               />
             </div>
@@ -144,9 +145,9 @@ export default function BlogCarousel() {
             <div className="absolute bottom-0 inset-x-0 z-10">
               <div className="flex flex-col h-full p-4 sm:p-6">
                 <h3 className="text-lg sm:text-3xl font-semibold text-white group-hover:text-white/80 group-focus:text-white/80">
-                  Vous adorez nos housse et voici pourquoi {">"}
+                  Les coulisses de Coverlly {">"}
                 </h3>
-                <p className="mt-2 text-white/80">Voici pourquoi vous aimez nos accessoires</p>
+                <p className="mt-2 text-white/80">Nos méthodes de fabrication</p>
               </div>
             </div>
           </Link>
@@ -177,7 +178,7 @@ export default function BlogCarousel() {
               width={900}
               height={900}
               className="size-full object-cover"
-              src="https://images.unsplash.com/photo-1663433541063-ddab084d1126?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1443916568596-df5a58c445e9?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Thumbnail 1"
             />
           </div>
@@ -225,7 +226,7 @@ export default function BlogCarousel() {
               width={900}
               height={900}
               className="size-full object-cover"
-              src="https://images.unsplash.com/photo-1443916568596-df5a58c445e9?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1663433541063-ddab084d1126?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Thumbnail 2"
             />
           </div>

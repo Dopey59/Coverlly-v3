@@ -89,7 +89,7 @@ export default function Navbar(){
                             Originaux
                           </Link>
                           <Link className="p-2 md:px-3 flex items-center text-sm text-gray-800 rounded-lg hover:bg-blue-100 focus:outline-none focus:bg-gray-100" href="/produits/categorie/jardin">
-                            Jardin d'arts
+                            Jardin d&apos;arts
                           </Link>
                           
                         
