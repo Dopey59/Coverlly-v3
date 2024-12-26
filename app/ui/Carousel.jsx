@@ -124,7 +124,7 @@ export default function BlogCarousel() {
                 <h3 className="text-lg sm:text-3xl font-semibold text-white group-hover:text-white/80 group-focus:text-white/80">
                   5 raisons d&apos;opter pour une housse {">"}
                 </h3>
-                <p className="mt-2 text-white/80">La housse d'ordinateur, aussi pratique que stylée !</p>
+                <p className="mt-2 text-white/80">La housse d&apos;ordinateur, aussi pratique que stylée !</p>
               </div>
             </div>
           </Link>
