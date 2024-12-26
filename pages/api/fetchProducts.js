@@ -1,40 +1,64 @@
 export default async function handler(req, res) {
-  console.log("Requête reçue : ", req.method); // Vérifier la méthode HTTP
+  // Vérifiez la méthode HTTP
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Méthode non autorisée" });
+  }
 
-  if (req.method === "POST") {
-    const { productIds } = req.body; // Liste des IDs de produits
-    console.log("IDs de produits demandés : ", productIds);
+  const { productIds } = req.body;
 
-    const apiToken = process.env.API_TOKEN;
-    console.log("Clé API récupérée ? ", !!apiToken);
+  // Validation des entrées
+  if (!productIds || !Array.isArray(productIds) || productIds.length === 0) {
+    return res.status(400).json({ error: "La liste des IDs de produits est invalide ou vide." });
+  }
 
-    try {
-      const promises = productIds.map(async (id) => {
-        console.log(`Envoi de la requête pour l'ID ${id}...`);
-        const res = await fetch(`https://api.printful.com/store/products/${id}`, {
+  const apiToken = process.env.API_TOKEN;
+
+  // Vérifiez que le token est disponible
+  if (!apiToken) {
+    return res.status(500).json({ error: "Clé API manquante sur le serveur." });
+  }
+
+  try {
+    // Limitez le nombre de requêtes simultanées (par exemple, à 10)
+    const MAX_CONCURRENT_REQUESTS = 10;
+
+    const fetchProduct = async (id) => {
+      try {
+        const response = await fetch(`https://api.printful.com/store/products/${id}`, {
           headers: {
             Authorization: `Bearer ${apiToken}`,
           },
         });
-        return await res.json();
-      });
 
-      const results = await Promise.all(promises);
+        // Vérifiez si la réponse est réussie
+        if (!response.ok) {
+          console.error(`Erreur API pour l'ID ${id}: ${response.statusText}`);
+          return null;
+        }
 
-      console.log("Résultats des requêtes : ", results); // Log complet des résultats
+        const result = await response.json();
+        return result.result; // Retournez uniquement la partie pertinente
+      } catch (error) {
+        console.error(`Erreur réseau pour l'ID ${id}:`, error.message);
+        return null;
+      }
+    };
 
-      const validProducts = results
-        .filter((result) => result.code === 200)
-        .map((result) => result.result);
-
-      console.log("Produits valides : ", validProducts);
-      return res.status(200).json(validProducts);
-    } catch (error) {
-      console.error("Erreur lors de la récupération des produits :", error);
-      return res.status(500).json({ error: "Erreur lors de l'appel à l'API externe" });
+    // Limitez le parallélisme des requêtes
+    const results = [];
+    for (let i = 0; i < productIds.length; i += MAX_CONCURRENT_REQUESTS) {
+      const chunk = productIds.slice(i, i + MAX_CONCURRENT_REQUESTS);
+      const chunkResults = await Promise.all(chunk.map(fetchProduct));
+      results.push(...chunkResults);
     }
-  } else {
-    console.log("Méthode HTTP non autorisée :", req.method);
-    return res.status(405).json({ error: "Méthode non autorisée" });
+
+    // Filtrez les produits valides
+    const validProducts = results.filter((product) => product !== null);
+
+    // Répondez avec les produits valides
+    return res.status(200).json(validProducts);
+  } catch (error) {
+    console.error("Erreur lors de la récupération des produits :", error.message);
+    return res.status(500).json({ error: "Erreur interne du serveur." });
   }
 }

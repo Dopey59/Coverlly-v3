@@ -24,7 +24,7 @@ export default function RetourEtRemboursement(){
                         <p className=" sm:w-full lg:text-base ">Les produits personnalisés ou fabriqués sur commande (ex. impression à la demande) ne sont pas éligibles au droit de rétractation, sauf en cas de défaut ou d’erreur dans la fabrication.</p>
                         <h2 className="md:text-2xl text-xl"><strong>2. Retours pour Produits Défectueux ou Erreurs </strong></h2>
                         <p className=" sm:w-full lg:text-base">
-                        Si le produit que vous avez reçu présente un défaut, une erreur d’impression ou des dommages lors du transport, veuillez nous contacter dans les 7 jours suivant la réception de votre commande à l&apos;adresse suivante : [email professionnel].
+                        Si le produit que vous avez reçu présente un défaut, une erreur d’impression ou des dommages lors du transport, veuillez nous contacter dans les 7 jours suivant la réception de votre commande à l&apos;adresse suivante : coverlly.contact@gmail.com.
                         <br /><br />Nous vous demanderons de fournir les éléments suivants :
                         </p>
                         <ol className="flex flex-col gap-3">
@@ -39,13 +39,13 @@ export default function RetourEtRemboursement(){
                     <div className="flex flex-col justify-center items-start gap-5 max-w-screen-lg mx-auto">
                         <h2 className="md:text-2xl text-xl"><strong>3. Procédure de Retour Pour initier un retour</strong></h2>
                         <ol className="flex flex-col gap-3">
-                            <li className="sm:w-full lg:text-base">- Contactez-nous à [adresse e-mail] en précisant votre numéro de commande.</li>
+                            <li className="sm:w-full lg:text-base">- Contactez-nous à coverlly.contact@gmail.com en précisant votre numéro de commande.</li>
                             <li className="sm:w-full lg:text-base">- Nous vous fournirons les instructions pour effectuer le retour.</li>
                         </ol>
                         <h3 className="sm:w-full lg:text-base"><strong>Adresse de Retour</strong></h3>
                         <ol className="flex flex-col gap-3">
                             <li className="sm:w-full lg:text-base">- En cas de produit défectueux ou d&apos;erreur : une adresse de retour pourra être communiquée pour renvoyer le colis à notre partenaire de production (Printful) si nécessaire.</li>
-                            <li className="sm:w-full lg:text-base">- En cas de retour volontaire (changement d’avis, erreur de taille non couverte par la garantie) : le produit devra être retourné à l&apos;adresse suivante : [Votre adresse de retour].</li>
+                            <li className="sm:w-full lg:text-base">- En cas de retour volontaire (changement d’avis, erreur de taille non couverte par la garantie) : le produit devra être retourné à l&apos;adresse suivante : 7 Rue du Pont Neuf, Lille, 59800, France.</li>
                         </ol>
                     </div>
                 </article>
@@ -54,7 +54,7 @@ export default function RetourEtRemboursement(){
                     <div className="flex flex-col justify-center items-start gap-5 max-w-screen-lg mx-auto">
                         <h2 className="md:text-2xl text-xl"><strong>4. Frais de Retour</strong></h2>
                         <ol className="flex flex-col gap-3">
-                            <li className="sm:w-full lg:text-base">- En cas de produit défectueux ou erreur de notre part : les frais de retour seront pris en charge par [Nom de votre entreprise].</li>
+                            <li className="sm:w-full lg:text-base">- En cas de produit défectueux ou erreur de notre part : les frais de retour seront pris en charge par Coverlly.</li>
                             <li className="sm:w-full lg:text-base">- En cas de retour volontaire : les frais de retour sont à la charge du client.</li>
                         </ol>
                     </div>

@@ -22,7 +22,7 @@ export default function CGU() {
                 <article className="  md:m-14 m-6 ">
                     <div className="flex flex-col justify-center items-start gap-5 max-w-screen-lg mx-auto">
                         <h1 className="uppercase font-black sm:text-3xl text-2xl">2. Informations Légales Propriétaire du site :</h1>
-                        <p className=" sm:w-full lg:text-base ">[SNO] Siège social : [31 RUE SANTOS DUMONT, 62100 CALAIS] Numéro SIRET : [90260327300019] Directeur de la publication : [PENET WILLIAM] Hébergeur : [En cours]</p>
+                        <p className=" sm:w-full lg:text-base ">[SNO] Siège social : [31 RUE SANTOS DUMONT, 62100 CALAIS] Numéro SIRET : [90260327300019] Directeur de la publication : [PENET WILLIAM] Hébergeur : [Hostinger & Vercel]</p>
                     </div>
                 </article>
 

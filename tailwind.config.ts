@@ -9,9 +9,7 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     './node_modules/preline/preline.js',
-
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       animation: {
@@ -30,6 +28,7 @@ export default {
     },
   },
   plugins: [
-    preline, forms
+    preline, forms,
+
   ],
 } satisfies Config;

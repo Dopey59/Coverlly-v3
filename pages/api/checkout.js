@@ -56,7 +56,7 @@ export default async function handler(req, res) {
         },
       },
     }));
-    
+    // console.log("Options de livraison pour Stripe :", shippingOptions);
 
     // Étape 3 : Création des articles pour Stripe
     const lineItems = items.map((item) => ({

@@ -1,4 +1,4 @@
-export const getProducts = async (offset: number = 0, limit: number = 20) => {
+export const getProducts = async (offset: number = 0, limit: number = 50) => {
   // Détection de l'origine pour construire une URL absolue
   const origin =
     typeof window !== "undefined"

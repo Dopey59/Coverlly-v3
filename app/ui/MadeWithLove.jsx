@@ -9,7 +9,7 @@ export default function MadeWithLove(){
     <section className="w-full sm:my-44 my-10">
         <article className="grid md:grid-cols-2">
             <div className="">
-                <Image priority width={500} height={500} className=" drop-shadow-2xl" src={Pov1} alt="image housse de protection - pc portable"/>
+                <Image priority width={900} height={900} className=" drop-shadow-2xl" src={Pov1} alt="image housse de protection - pc portable"/>
             </div>
             <div className="p-3 flex flex-col lg:gap-16 gap-10 justify-center items-center ">
                 <div className="flex items-center justify-center">
@@ -25,7 +25,7 @@ export default function MadeWithLove(){
                         partout avec classe.</p>
                     <div>
                         <Link href="/a-propos">
-                            <button className="bg-black rounded p-2 text-white transition ease-in-out hover:duration-500 hover:bg-rose-300">En savoir plus</button>
+                            <button className='border-black p-2 border-2 rounded-lg'>En savoir plus</button>
                         </Link>
                     </div>
                 </div>

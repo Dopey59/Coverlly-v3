@@ -4,13 +4,10 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCards, Pagination, Autoplay } from "swiper/modules"; // Modules nécessaires
 import "swiper/swiper-bundle.css"; // Styles essentiels pour Swiper
-import Vert from '../assets/images/products/copenhague.webp';
-import Bordeaux from "../assets/images/products/bordeaux.webp";
-import Capucine from '../assets/images/products/capucine.webp';
-import Indigo from '../assets/images/products/indigo.webp';
-import Mauve from '../assets/images/products/mauve.webp';
-import Noir from '../assets/images/products/noir.webp';
-
+import Patron from '../assets/images/products/patron.webp';
+import Vivement from "../assets/images/products/vivement.webp";
+import Flemme from '../assets/images/products/flemme.webp';
+import Lundi from '../assets/images/products/lundi.webp';
 import { useEffect } from 'react';
 import gsap from 'gsap';
 
@@ -33,11 +30,10 @@ export default function CarouselV2() {
       }
     );
   }, []);
-
   return (
     <>
      <div className="relative h-4 flex justify-center md:block md:mx-4 sm:my-24 my-10">
-     <h1 className="animated-text md:text-6xl text-4xl font-bold text-zinc-800 ">Quel housse est faite pour  <span className='anim-text'>Toi</span> ?</h1>
+     <h1 className="lg:text-6xl text-4xl font-bold text-zinc-800 mx-4">Nouveautés de la <span className='anim-text'>semaine</span></h1>
      </div>
      <Swiper
       modules={[EffectCards, Pagination, Autoplay]} // Modules nécessaires pour l'effet Cards
@@ -71,91 +67,61 @@ export default function CarouselV2() {
         
         <SwiperSlide className="">
           <div className="flex items-center justify-center" data-swiper-parallax="-200">
-            <Link href="/produits/370680525">
+            <Link href="/produits/370773182">
                 <Image
-                src={Mauve}
+                src={Patron}
                 alt="Image produit 1"
                 width={500}
                 height={500}
                 placeholder="blur" // Pour le chargement progressif (optionnel)
                 />
             </Link>
-                <h1 placeholder="blur" className="absolute bottom-5 md:bottom-10 xl:bottom-5 uppercase text-base  font-medium">Casual Mauve</h1>
+                <h1 placeholder="blur" className="absolute bottom-5 md:bottom-10 xl:bottom-5 uppercase text-base  font-medium">BONJOUR PATRON</h1>
             </div>
         </SwiperSlide>
 
         <SwiperSlide className="">
           <div className="flex items-center justify-center" data-swiper-parallax="-200">
-          <Link href="/produits/370680540">
+          <Link href="/produits/370773008">
                 <Image
-                src={Indigo}
+                src={Vivement}
                 alt="Image produit 2"
                 width={500}
                 height={500}
                 placeholder="blur"
                 />
           </Link>
-            <h1 placeholder="blur" className="absolute bottom-5 md:bottom-10 xl:bottom-5 uppercase text-base  font-medium">Casual Indigo</h1>
+            <h1 placeholder="blur" className="absolute bottom-5 md:bottom-10 xl:bottom-5 uppercase text-base  font-medium">Vivement 17H30</h1>
           </div>
         </SwiperSlide>
 
         <SwiperSlide className="">
           <div className="flex items-center justify-center" data-swiper-parallax="-200">
-          <Link href="/produits/370680773">
+          <Link href="/produits/370772451">
                 <Image
-                src={Vert}
+                src={Flemme}
                 alt="Image produit 3"
                 width={500}
                 height={500}
                 placeholder="blur"
                 />
           </Link>
-            <h1 placeholder="blur" className="absolute bottom-5 md:bottom-10 xl:bottom-5 uppercase text-base  font-medium">Casual Copenhague</h1>
+            <h1 placeholder="blur" className="absolute bottom-5 md:bottom-10 xl:bottom-5 uppercase text-base  font-medium">AUJOURD&apos;HUI FLEMME</h1>
           </div>
         </SwiperSlide>
 
         <SwiperSlide className="">
           <div className="flex items-center justify-center" data-swiper-parallax="-200">
-          <Link href="/produits/370680819">
+          <Link href="/produits/370772161">
                 <Image
-                src={Capucine}
+                src={Lundi}
                 alt="Image produit 4"
                 width={500}
                 height={500}
                 placeholder="blur"
                 />
           </Link>
-            <h1 placeholder="blur" className="absolute bottom-5 md:bottom-10 uppercase xl:bottom-5 text-base font-medium">Casual Capucine</h1>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="">
-          <div className="flex items-center justify-center" data-swiper-parallax="-200">
-          <Link href="/produits/370680555">
-                <Image
-                src={Bordeaux}
-                alt="Image produit 4"
-                width={500}
-                height={500}
-                placeholder="blur"
-                />
-          </Link>
-            <h1 placeholder="blur" className="absolute bottom-5 md:bottom-10 xl:bottom-5 uppercase text-base font-medium">Casual Bordeaux</h1>
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide className="">
-          <div className="flex items-center justify-center" data-swiper-parallax="-200">
-          <Link href="/produits/370680563">
-                <Image
-                src={Noir}
-                alt="Image produit 4"
-                width={500}
-                height={500}
-                placeholder="blur"
-                />
-          </Link>
-            <h1 placeholder="blur" className="absolute bottom-5 md:bottom-10 xl:bottom-5 uppercase text-base font-medium">Casual Black</h1>
+            <h1 placeholder="blur" className="absolute bottom-5 md:bottom-10 uppercase xl:bottom-5 text-base font-medium">OH SHIT</h1>
           </div>
         </SwiperSlide>
       </Swiper>

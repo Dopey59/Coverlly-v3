@@ -14,7 +14,7 @@ import PrelineScript from "../../app/components/PrelineScript";
 
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY);
  
-const ProductDetail = ({ product, error }) => {
+const ProductDetail = ({ product }) => {
 
   const { sync_product, sync_variants } = product || {};
   const { name, thumbnail_url } = sync_product || {};
@@ -24,7 +24,7 @@ const ProductDetail = ({ product, error }) => {
   const [selectedPrice, setSelectedPrice] = useState(0); // Nouveau : pour le prix
 
   useEffect(() => {
-          feather.replace(); // Remplace les éléments <i data-feather="icon-name"> par des SVG
+  feather.replace(); // Remplace les éléments <i data-feather="icon-name"> par des SVG
 
     if (typeof window !== 'undefined' && window.HS && window.HS.core) {
       window.HS.core.runAll();
@@ -50,7 +50,7 @@ const ProductDetail = ({ product, error }) => {
   };
 
   // Hook pour géolocalisation
-  const { countryCode, setCountryCode, loading } = useGeolocation();
+  const { countryCode, setCountryCode } = useGeolocation();
   const [selectedCountry, setSelectedCountry] = useState(countryCode);
 
   const handleCountryChange = (event) => {
@@ -69,33 +69,6 @@ const ProductDetail = ({ product, error }) => {
     zip: "75001",
   };
 
-  if (loading)  return (
-    <div className="">
-      <div className="h-screen flex justify-center items-center text-center">
-        <p className="font-bold md:text-3xl text-2xl ">Chargement de votre localisation...📍</p>
-      </div>
-    </div>
-
-  )
-
-  if (error)  return (
-    <div className="">
-      <div className="h-screen flex flex-col gap-3 justify-center items-center">
-        <p className="font-bol md:text-3xl text-2xl">Nous travaillons probablement déjà sur le problème ! 🛠️</p>
-        <p className="font-bol md:text-3xl text-2xl">Désolé pour la gêne occasionnée. 🫢</p>
-      </div>
-    </div>
-
-  )
-
-  if (!product)  return (
-    <div className="">
-      <div className="h-screen flex justify-center items-center">
-        <p className="font-bol md:text-3xl text-2xl">Oops ! Une erreur est survenue.. ❌</p>;
-      </div>
-    </div>
-
-  );
 
   const handlePayment = async () => {
     const items = [
@@ -163,7 +136,7 @@ const ProductDetail = ({ product, error }) => {
             <h1 className="font-bold md:text-4xl text-3xl">
                 {`Pochette de protection - ${name || "Nom non spécifié"} (${selectedSize})`}
             </h1>
-            <div className="flex gap-3 w-full items-center justify-center">
+            <div className="flex gap-3 w-full ">
               <p className="text-xl">{selectedPrice.toFixed(2)}€</p>{/* Affiche le prix dynamique */}
               <span className=" text-gray-500 text-base line-through">34.99€</span>
             </div>
@@ -183,7 +156,7 @@ const ProductDetail = ({ product, error }) => {
               <h1 className="font-bold md:text-4xl  text-2xl">
                   {`Pochette de protection - ${name || "Nom non spécifié"} (${selectedSize})`}
               </h1>
-              <div className="flex gap-3 w-full items-center justify-center">
+              <div className="flex gap-3 ">
                 <p className="text-xl">{selectedPrice.toFixed(2)}€</p>{/* Affiche le prix dynamique */}
                 <span className=" text-gray-500 text-base line-through">34.99€</span>
               </div>
@@ -228,17 +201,23 @@ const ProductDetail = ({ product, error }) => {
               <div className="flex flex-col gap-2 rounded   w-full">
                 {/* Trust Badges */}
                 <div className=" flex flex-col gap-1 justify-center items-center text-balance">
-                  <div className="flex gap-3 w-full">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 10h6c1.654 0 3 1.346 3 3s-1.346 3-3 3h-3v2h3c2.757 0 5-2.243 5-5s-2.243-5-5-5H9V5L4 9l5 4v-3z"></path></svg>
-                      <p className="w-full">14 jours pour changer d&apos;avis</p>
+                  <div className="flex items-center w-full gap-2">
+                    <div className="bg-blue-100 rounded flex items-center p-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" fill="blue" height="20" viewBox="0 0 24 24"><path d="M9 10h6c1.654 0 3 1.346 3 3s-1.346 3-3 3h-3v2h3c2.757 0 5-2.243 5-5s-2.243-5-5-5H9V5L4 9l5 4v-3z"></path></svg>
+                    </div>
+                      <p className="w-full sm:text-base text-sm text-gray-500">14 jours pour changer d&apos;avis</p>
                   </div>
-                  <div className="flex gap-3 w-full">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="m22 3.41-.12-1.26-1.2.4a13.84 13.84 0 0 1-6.41.64 11.87 11.87 0 0 0-6.68.9A7.23 7.23 0 0 0 3.3 9.5a9 9 0 0 0 .39 4.58 16.6 16.6 0 0 1 1.18-2.2 9.85 9.85 0 0 1 4.07-3.43 11.16 11.16 0 0 1 5.06-1A12.08 12.08 0 0 0 9.34 9.2a9.48 9.48 0 0 0-1.86 1.53 11.38 11.38 0 0 0-1.39 1.91 16.39 16.39 0 0 0-1.57 4.54A26.42 26.42 0 0 0 4 22h2a30.69 30.69 0 0 1 .59-4.32 9.25 9.25 0 0 0 4.52 1.11 11 11 0 0 0 4.28-.87C23 14.67 22 3.86 22 3.41z"></path></svg>
-                      <p className="w-full">Eco Friendly - Production à la commande</p>
+                  <div className="flex items-center w-full gap-2">
+                    <div className="bg-blue-100 rounded flex items-center p-1">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="blue"  width="20" height="20" viewBox="0 0 24 24"><path d="m22 3.41-.12-1.26-1.2.4a13.84 13.84 0 0 1-6.41.64 11.87 11.87 0 0 0-6.68.9A7.23 7.23 0 0 0 3.3 9.5a9 9 0 0 0 .39 4.58 16.6 16.6 0 0 1 1.18-2.2 9.85 9.85 0 0 1 4.07-3.43 11.16 11.16 0 0 1 5.06-1A12.08 12.08 0 0 0 9.34 9.2a9.48 9.48 0 0 0-1.86 1.53 11.38 11.38 0 0 0-1.39 1.91 16.39 16.39 0 0 0-1.57 4.54A26.42 26.42 0 0 0 4 22h2a30.69 30.69 0 0 1 .59-4.32 9.25 9.25 0 0 0 4.52 1.11 11 11 0 0 0 4.28-.87C23 14.67 22 3.86 22 3.41z"></path></svg>
+                    </div>
+                      <p className="w-full sm:text-base text-sm text-gray-500">Eco Friendly - Production à la commande</p>
                   </div>
-                  <div className="flex gap-3 w-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M21.993 7.95a.96.96 0 0 0-.029-.214c-.007-.025-.021-.049-.03-.074-.021-.057-.04-.113-.07-.165-.016-.027-.038-.049-.057-.075-.032-.045-.063-.091-.102-.13-.023-.022-.053-.04-.078-.061-.039-.032-.075-.067-.12-.094-.004-.003-.009-.003-.014-.006l-.008-.006-8.979-4.99a1.002 1.002 0 0 0-.97-.001l-9.021 4.99c-.003.003-.006.007-.011.01l-.01.004c-.035.02-.061.049-.094.073-.036.027-.074.051-.106.082-.03.031-.053.067-.079.102-.027.035-.057.066-.079.104-.026.043-.04.092-.059.139-.014.033-.032.064-.041.1a.975.975 0 0 0-.029.21c-.001.017-.007.032-.007.05V16c0 .363.197.698.515.874l8.978 4.987.001.001.002.001.02.011c.043.024.09.037.135.054.032.013.063.03.097.039a1.013 1.013 0 0 0 .506 0c.033-.009.064-.026.097-.039.045-.017.092-.029.135-.054l.02-.011.002-.001.001-.001 8.978-4.987c.316-.176.513-.511.513-.874V7.998c0-.017-.006-.031-.007-.048zm-10.021 3.922L5.058 8.005 7.82 6.477l6.834 3.905-2.682 1.49zm.048-7.719L18.941 8l-2.244 1.247-6.83-3.903 2.153-1.191zM13 19.301l.002-5.679L16 11.944V15l2-1v-3.175l2-1.119v5.705l-7 3.89z"></path></svg>
-                      <p className="w-full">Expédiée et livrée en 2 à 5 jours (ouvrés)</p>
+                  <div className="flex items-center w-full gap-2">
+                    <div className="bg-blue-100 rounded flex items-center p-1">
+                      <svg xmlns="http://www.w3.org/2000/svg"  fill="blue"  width="20" height="20" viewBox="0 0 24 24"><path d="M21.993 7.95a.96.96 0 0 0-.029-.214c-.007-.025-.021-.049-.03-.074-.021-.057-.04-.113-.07-.165-.016-.027-.038-.049-.057-.075-.032-.045-.063-.091-.102-.13-.023-.022-.053-.04-.078-.061-.039-.032-.075-.067-.12-.094-.004-.003-.009-.003-.014-.006l-.008-.006-8.979-4.99a1.002 1.002 0 0 0-.97-.001l-9.021 4.99c-.003.003-.006.007-.011.01l-.01.004c-.035.02-.061.049-.094.073-.036.027-.074.051-.106.082-.03.031-.053.067-.079.102-.027.035-.057.066-.079.104-.026.043-.04.092-.059.139-.014.033-.032.064-.041.1a.975.975 0 0 0-.029.21c-.001.017-.007.032-.007.05V16c0 .363.197.698.515.874l8.978 4.987.001.001.002.001.02.011c.043.024.09.037.135.054.032.013.063.03.097.039a1.013 1.013 0 0 0 .506 0c.033-.009.064-.026.097-.039.045-.017.092-.029.135-.054l.02-.011.002-.001.001-.001 8.978-4.987c.316-.176.513-.511.513-.874V7.998c0-.017-.006-.031-.007-.048zm-10.021 3.922L5.058 8.005 7.82 6.477l6.834 3.905-2.682 1.49zm.048-7.719L18.941 8l-2.244 1.247-6.83-3.903 2.153-1.191zM13 19.301l.002-5.679L16 11.944V15l2-1v-3.175l2-1.119v5.705l-7 3.89z"></path></svg>
+                    </div>
+                    <p className="w-full sm:text-base text-sm text-gray-500">Expédiée et livrée en 2 à 5 jours (ouvrés)</p>
                   </div>
                 </div>
                 {/* END - Trust Badges */}

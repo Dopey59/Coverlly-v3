@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "pages/produits/[id].js", "tailwind.config.ts", "app/components/ui/text-generate-effect.jsx", "app/retour&remboursement/page.tsx", "app/contact/page.tsx", "app/success/page.jsx", "app/components/ui/placeholders-and-vanish-input.tsx", "app/produits/loading.jsx", "app/produits/categorie/jardin-d-art/page.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "pages/produits/[id].js", "tailwind.config.ts", "app/components/ui/text-generate-effect.jsx", "app/retour&remboursement/page.tsx", "app/contact/page.tsx", "app/success/page.jsx", "app/components/ui/placeholders-and-vanish-input.tsx", "app/produits/loading.jsx", "app/produits/categorie/jardin/page.tsx", "app/components/ui/table.tsx", "app/components/NewCollection.jsx", "__tests__/getProducts.test.ts"],
   "exclude": ["node_modules"]
 }

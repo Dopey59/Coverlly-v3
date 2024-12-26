@@ -1,9 +1,22 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  compress: true,
   reactStrictMode: true,
+  // experimental: {
+  //   ppr: 'incremental',
+  // },
   images: {
-    domains: ['files.cdn.printful.com', 'images.unsplash.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'files.cdn.printful.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
   },
   env: {
     API_TOKEN: process.env.API_TOKEN,
@@ -16,7 +29,13 @@ const nextConfig: NextConfig = {
       {
         source: '/:path*', // Toutes les pages
         headers: [
-          { key: 'x-robots-tag', value: 'index, follow' }, // Autorise l'indexation
+          { key: 'x-robots-tag',
+            value: 'index, follow', // Autorise l'indexation
+          }, 
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=600, stale-while-revalidate=1200', // Cache-Control pour toutes les requêtes
+          },
         ],
       },
     ];

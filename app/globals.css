@@ -43,8 +43,9 @@
   background: linear-gradient(-45deg, #009dff, #2f5e85, #e98bde, #009dff);
   background-size: 300% 300%;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradient 15s ease infinite;
+  animation: gradient 8s ease infinite;
 }
 
 .anim-button {
@@ -101,6 +102,11 @@
   /* Premier élément */
   .text-item:nth-child(1) {
 	animation-delay: 1.5s;
+  }
+  
+  .swiper-wrapper {
+	display: flex !important; /* Forcer l'utilisation de flex pour les slides */
+	gap: 10px; /* Ajoute un espacement natif entre les slides */
   }
   
   /* Deuxième élément */

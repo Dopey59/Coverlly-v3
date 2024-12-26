@@ -22,7 +22,7 @@ export function PlaceholdersAndVanishInputDemo() {
  
   return (
     <div className="md:h-[30rem] h-96 flex flex-col justify-center  items-center px-4">
-      <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-black">
+      <h2 className="mb-10 sm:mb-20 text-xl text-center sm:text-5xl">
         Rejoins nous et reçois les nouvelles offres par e-mail.
       </h2>
       <PlaceholdersAndVanishInput
