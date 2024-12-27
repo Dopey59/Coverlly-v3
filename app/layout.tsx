@@ -4,6 +4,7 @@ import PrelineScript from "./components/PrelineScript";
 import ClientNavbar from "./components/ClientNavbar"; // Importe le composant client
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: "Coverlly - Housse de protection pc portable",
@@ -29,6 +30,7 @@ export default function RootLayout({
         <ClientNavbar />
         {children}
         <Analytics />
+        <SpeedInsights/>
         <Footer />
         <PrelineScript /> {/* Correct placement */}
       </body>
