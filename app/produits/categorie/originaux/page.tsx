@@ -54,7 +54,7 @@ console.log(productIds)
                 priority
               />
             </Link>
-            <h2 className="text-base sm:text-lg font-semibold ">
+            <h2 className="text-xs sm:text-base text-center uppercase font-semibold ">
               {product.name || product.sync_product?.name || "Nom du produit"}
             </h2>
             <span>29.99€</span>

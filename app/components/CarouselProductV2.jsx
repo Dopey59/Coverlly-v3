@@ -52,9 +52,8 @@ export default function CarouselV2() {
       }}
       breakpoints={{
         // Configuration des espaces et comportements selon la taille de l'écran
-        320: {
+        350: {
           slidesPerView: 1,
-          spaceBetween: 20,
         },
         768: {
           slidesPerView:  2,

@@ -8,7 +8,6 @@ import Details from '../../app/components/details'
 // import { addToCart } from "../../app/utils/cart";
 import Link from "next/link";
 import "/app/globals.css";
-import feather from "feather-icons";
 import PrelineScript from "../../app/components/PrelineScript";
 
 
@@ -24,7 +23,6 @@ const ProductDetail = ({ product }) => {
   const [selectedPrice, setSelectedPrice] = useState(0); // Nouveau : pour le prix
 
   useEffect(() => {
-  feather.replace(); // Remplace les éléments <i data-feather="icon-name"> par des SVG
 
     if (typeof window !== 'undefined' && window.HS && window.HS.core) {
       window.HS.core.runAll();
